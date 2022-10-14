@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

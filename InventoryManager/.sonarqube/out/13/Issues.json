@@ -1,0 +1,330 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.3.0.0",
+        "fileVersion": "4.3.0-3.22365.10 (dd078d4e)",
+        "semanticVersion": "4.3.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'void List<DefaultInventoryItem>.Add(DefaultInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 28,
+                  "endLine": 22,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'void List<DefaultInventoryItem>.Add(DefaultInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 50,
+                  "endLine": 30,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'bool List<DefaultInventoryItem>.Remove(DefaultInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 31,
+                  "endLine": 35,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'bool List<DefaultInventoryItem>.Remove(DefaultInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 53,
+                  "endLine": 40,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 20,
+                  "endLine": 45,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 60,
+                  "startColumn": 50,
+                  "endLine": 60,
+                  "endColumn": 77
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'int List<DefaultInventoryItem>.IndexOf(DefaultInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 39,
+                  "endLine": 70,
+                  "endColumn": 66
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 33,
+                  "endLine": 72,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'int List<DefaultInventoryItem>.IndexOf(DefaultInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 43,
+                  "endLine": 79,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 81,
+                  "startColumn": 37,
+                  "endLine": 81,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'bool List<DefaultInventoryItem>.Remove(DefaultInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 31,
+                  "endLine": 87,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'items' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 44,
+                  "endLine": 10,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS8601": {
+          "id": "CS8601",
+          "shortDescription": "Possible null reference assignment.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8601)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8603": {
+          "id": "CS8603",
+          "shortDescription": "Possible null reference return.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8603)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8604": {
+          "id": "CS8604",
+          "shortDescription": "Possible null reference argument.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S2933": {
+          "id": "S2933",
+          "shortDescription": "Fields that are only assigned in the constructor should be \"readonly\"",
+          "fullDescription": "readonly fields can only be assigned in a class constructor. If a class has a field that’s not marked readonly but is only set in the constructor, it could cause confusion about the field’s intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2933",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+﻿C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Controllers\InventoryItemsController.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Program.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\InventoryManager.API.GlobalUsings.g.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\InventoryManager.API.AssemblyInfo.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\InventoryManager.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\appsettings.Development.json
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\appsettings.json
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Dockerfile
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Properties\launchSettings.json
