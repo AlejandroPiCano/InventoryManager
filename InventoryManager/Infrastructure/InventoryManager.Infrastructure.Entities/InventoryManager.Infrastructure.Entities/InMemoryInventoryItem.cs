@@ -1,13 +1,14 @@
-﻿
-namespace InventoryManager.Domain.Entities
+﻿using InventoryManager.Domain.Entities;
+
+namespace InventoryManager.Infrastructure.Entities
 {
     /// <summary>
-    /// The BussinessInventoryItem class
+    /// The InMemoryInventoryItem class
     /// </summary>
-    public class BussinessInventoryItem : InventoryItem
+    public class InMemoryInventoryItem : InventoryItem
     {
         /// <summary>
-        /// The Identifier.
+        /// The identifier.
         /// </summary>
         public int Id { get; set; }
 
@@ -15,8 +16,9 @@ namespace InventoryManager.Domain.Entities
         /// The Name.
         /// </summary>
         public string Name { get; set; }
+
         /// <summary>
-        /// The Expiration Date.
+        /// The expiration date.
         /// </summary>
         public DateTime? ExpirationDate { get; set; }
 

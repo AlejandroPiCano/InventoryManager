@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "f0d2e04c-fbf8-47cb-96bc-d436e206e725",
+		"name": "Alex Pi- Inventory API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:61408/api/InventoryItems",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:61408/api/InventoryItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61408",
+					"path": [
+						"api",
+						"InventoryItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:61408/api/InventoryItems",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"name\": \"A2\",\r\n  \"expirationDate\": \"2022-10-15T06:48:47.006Z\",\r\n  \"type\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:61408/api/InventoryItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61408",
+					"path": [
+						"api",
+						"InventoryItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:61408/api/InventoryItems/1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:61408/api/InventoryItems/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61408",
+					"path": [
+						"api",
+						"InventoryItems",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:61408/api/InventoryItems/DeleteByName/A2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:61408/api/InventoryItems/DeleteByName/A2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61408",
+					"path": [
+						"api",
+						"InventoryItems",
+						"DeleteByName",
+						"A2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:61408/api/InventoryItems/0",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Modifying the id\",\r\n  \"expirationDate\": \"2022-10-15T06:57:23.522Z\",\r\n  \"type\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:61408/api/InventoryItems/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61408",
+					"path": [
+						"api",
+						"InventoryItems",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -3,6 +3,9 @@ using InventoryManager.Domain.Entities;
 
 namespace InventoryManager.Application
 {
+    /// <summary>
+    /// The InventoryItemConverter class
+    /// </summary>
     internal static class InventoryItemConverter
     {
         /// <summary>
@@ -15,7 +18,7 @@ namespace InventoryManager.Application
             if (inventoryItem == null)
                 return null;
 
-            return new InventoryItemDTO() 
+            return new InventoryItemDTO()
             {
                 Id = inventoryItem.Id,
                 Name = inventoryItem.Name,

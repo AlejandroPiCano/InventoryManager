@@ -1,12 +1,10 @@
 ﻿using InventoryManager.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryManager.Domain.Domain.Services
 {
+    /// <summary>
+    /// The IInventoryDomainService interface.
+    /// </summary>
     public interface IInventoryDomainService
     {
         /// <summary>

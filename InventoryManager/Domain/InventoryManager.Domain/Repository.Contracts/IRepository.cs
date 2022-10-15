@@ -1,5 +1,9 @@
 ﻿namespace InventoryManager.Domain.Repository.Contracts
 {
+    /// <summary>
+    /// The IRepository interface.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IRepository<T>
     {
         /// <summary>

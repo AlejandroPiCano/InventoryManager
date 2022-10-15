@@ -1,19 +1,32 @@
-﻿using InventoryManager.Application.DTOs;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using InventoryManager.Application.DTOs;
 using InventoryManager.Domain.Domain.Services;
 using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repository.Contracts;
 
 namespace InventoryManager.Application.Services
 {
+    /// <summary>
+    /// The Inventory List Service.
+    /// </summary>
     public class InventoryListService : IInventoryListService
     {
         readonly IInventoryDomainService inventoryListDomainService;
         readonly IRepository<InventoryItem> inventoryListRepository;
+        readonly IValidator<InventoryItemDTO> validator;
 
-        public InventoryListService(IInventoryDomainService inventoryListDomainService, IRepository<InventoryItem> inventoryListRepository)
+        /// <summary>
+        /// The InventoryListService constructor.
+        /// </summary>
+        /// <param name="inventoryListDomainService"></param>
+        /// <param name="inventoryListRepository"></param>
+        /// <param name="validator"></param>
+        public InventoryListService(IInventoryDomainService inventoryListDomainService, IRepository<InventoryItem> inventoryListRepository, IValidator<InventoryItemDTO> validator)
         {
             this.inventoryListDomainService = inventoryListDomainService;
             this.inventoryListRepository = inventoryListRepository;
+            this.validator = validator;
         }
 
         #region Interface Implementation
@@ -30,11 +43,11 @@ namespace InventoryManager.Application.Services
         /// Create a inventory Item
         /// </summary>
         /// <param name="inventoryItem"></param>
-        ValidationResultDTO IInventoryListService.Create(InventoryItemDTO inventoryItemDTO)
+        ValidationResult IInventoryListService.Create(InventoryItemDTO inventoryItemDTO)
         {
-            var result = inventoryItemDTO.CheckValidation();
+            ValidationResult result = validator.Validate(inventoryItemDTO);
 
-            if (result.Result == ResultTypeDTO.Ok)
+            if (result.IsValid)
             {
                 this.inventoryListRepository.Create(InventoryItemConverter.ConvertInventoryDTOToEntitiy(inventoryItemDTO, inventoryListRepository.GetNew(), true));
             }
@@ -46,11 +59,11 @@ namespace InventoryManager.Application.Services
         /// Delete a inventory Item 
         /// </summary>
         /// <param name="id"></param>
-        ValidationResultDTO IInventoryListService.Delete(int id)
+        ValidationResult IInventoryListService.Delete(int id)
         {
             this.inventoryListRepository.Delete(id);
 
-            return new ValidationResultDTO();
+            return new ValidationResult();
         }
 
         /// <summary>
@@ -79,11 +92,11 @@ namespace InventoryManager.Application.Services
         /// </summary>
         /// <param name="id"></param>
         /// <param name="inventoryItemDTO"></param>
-        ValidationResultDTO IInventoryListService.Update(int id, InventoryItemDTO inventoryItemDTO)
+        ValidationResult IInventoryListService.Update(int id, InventoryItemDTO inventoryItemDTO)
         {
-            var result = inventoryItemDTO.CheckValidation();
+            ValidationResult result = validator.Validate(inventoryItemDTO);
 
-            if (result.Result == ResultTypeDTO.Ok)
+            if (result.IsValid)
             {
                 this.inventoryListRepository.Update(id, InventoryItemConverter.ConvertInventoryDTOToEntitiy(inventoryItemDTO, inventoryListRepository.GetNew()));
             }
@@ -98,11 +111,11 @@ namespace InventoryManager.Application.Services
             return result.Select(i => InventoryItemConverter.ConvertInventoryItemEntityToDTO(i)).ToList();
         }
 
-        public async Task<ValidationResultDTO> CreateAsync(InventoryItemDTO inventoryItemDTO)
+        public async Task<ValidationResult> CreateAsync(InventoryItemDTO inventoryItemDTO)
         {
-            var result = inventoryItemDTO.CheckValidation();
+            ValidationResult result = validator.Validate(inventoryItemDTO);
 
-            if (result.Result == ResultTypeDTO.Ok)
+            if (result.IsValid)
             {
                 await this.inventoryListRepository.CreateAsync(InventoryItemConverter.ConvertInventoryDTOToEntitiy(inventoryItemDTO, inventoryListRepository.GetNew(), true));
             }
@@ -110,11 +123,11 @@ namespace InventoryManager.Application.Services
             return result;
         }
 
-        public async Task<ValidationResultDTO> UpdateAsync(int id, InventoryItemDTO inventoryItemDTO)
+        public async Task<ValidationResult> UpdateAsync(int id, InventoryItemDTO inventoryItemDTO)
         {
-            var result = inventoryItemDTO.CheckValidation();
+            ValidationResult result = validator.Validate(inventoryItemDTO);
 
-            if (result.Result == ResultTypeDTO.Ok)
+            if (result.IsValid)
             {
                 await this.inventoryListRepository.UpdateAsync(id, InventoryItemConverter.ConvertInventoryDTOToEntitiy(inventoryItemDTO, inventoryListRepository.GetNew()));
             }
@@ -122,11 +135,11 @@ namespace InventoryManager.Application.Services
             return result;
         }
 
-        public async Task<ValidationResultDTO> DeleteAsync(int id)
+        public async Task<ValidationResult> DeleteAsync(int id)
         {
             await this.inventoryListRepository.DeleteAsync(id);
 
-            return new ValidationResultDTO();
+            return new ValidationResult();
         }
 
         public async Task<InventoryItemDTO> GetInventoryItemAsync(int id)
@@ -136,11 +149,11 @@ namespace InventoryManager.Application.Services
             return InventoryItemConverter.ConvertInventoryItemEntityToDTO(inventoryItem);
         }
 
-        public ValidationResultDTO DeleteByName(string name)
+        public ValidationResult DeleteByName(string name)
         {
             this.inventoryListRepository.DeleteByName(name);
 
-            return new ValidationResultDTO();
+            return new ValidationResult();
         }
         #endregion
     }
