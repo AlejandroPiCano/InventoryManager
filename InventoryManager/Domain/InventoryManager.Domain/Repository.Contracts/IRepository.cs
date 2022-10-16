@@ -74,5 +74,11 @@
         /// </summary>
         /// <param name="id"></param>
         Task DeleteAsync(int id);
+
+        /// <summary>
+        /// Delete a inventory Item by name
+        /// </summary>
+        /// <param name="name"></param>
+        Task DeleteByNameAsync(string name);
     }
 }

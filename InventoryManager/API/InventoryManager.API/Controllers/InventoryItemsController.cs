@@ -34,35 +34,14 @@ namespace InventoryManager.API.Controllers
             this._service = service;
             this._logger = logger;
         }
-
-        // GET: api/<InventoryListController>
-        /// <summary>
-        /// The Get operation
-        /// </summary>
-        /// <returns>IEnumerable<InventoryItemDTO></returns>
-        [HttpGet]
-        public IEnumerable<InventoryItemDTO> Get()
-        {
-            IEnumerable<InventoryItemDTO> result = null;
-
-            try
-            {
-                result = _service.GetAllInventoryItems();
-            }
-            catch (System.Exception e)
-            {
-                _logger.LogInformation(e.Message);
-            }
-
-            return result;
-        }
+               
         /// <summary>
         /// The Get async operation
         /// </summary>
         /// <returns></returns>
         // GET: api/<InventoryListController>/GetAsync
-        [HttpGet("GetAsync")]
-        public async Task<IEnumerable<InventoryItemDTO>> GetAsync()
+        [HttpGet]
+        public async Task<IEnumerable<InventoryItemDTO>> Get()
         {
             Task<List<InventoryItemDTO>>? result = null;
 
@@ -85,13 +64,13 @@ namespace InventoryManager.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public InventoryItemDTO Get(int id)
+        public async Task<InventoryItemDTO> Get(int id)
         {
             InventoryItemDTO result = null;
 
             try
             {
-                result = _service.GetInventoryItem(id);
+                return await _service.GetInventoryItemAsync(id);
             }
             catch (System.Exception e)
             {
@@ -120,39 +99,15 @@ namespace InventoryManager.API.Controllers
                 return null;
             }
         }
-
-        /// <summary>
-        /// Create an InventoryItemDTO
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns>The ValidationResult.</returns>
-        // POST api/<InventoryListController>
-        [HttpPost]
-        public ValidationResult Post([FromBody] InventoryItemDTO value)
-        {
-            try
-            {
-                return _service.Create(value);
-            }
-            catch (System.Exception e)
-            {
-                _logger.LogInformation(e.Message);
-
-                var result = new ValidationResult();
-                result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
-
-                return result;
-            }
-        }
-
+               
         /// <summary>
         /// Create an InventoryItemDTO async
         /// </summary>
         /// <param name="value"></param>
         /// <returns>The ValidationResult.</returns>
         // POST api/<InventoryListController>
-        [HttpPost("PostAsync")]
-        public async Task<ValidationResult> PostAsync([FromBody] InventoryItemDTO value)
+        [HttpPost]
+        public async Task<ValidationResult> Post([FromBody] InventoryItemDTO value)
         {
             try
             {
@@ -179,20 +134,23 @@ namespace InventoryManager.API.Controllers
         /// <returns>The ValidationResult.</returns>
         // PUT api/<InventoryListController>/5
         [HttpPut("{id}")]
-        public ValidationResult Put(int id, [FromBody] InventoryItemDTO value)
+        public async Task<ValidationResult> Put(int id, [FromBody] InventoryItemDTO value)
         {
             try
             {
-                return _service.Update(id, value);
+                return await _service.UpdateAsync(id, value);
             }
             catch (System.Exception e)
             {
                 _logger.LogInformation(e.Message);
 
-                var result = new ValidationResult();
-                result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
+                return await new Task<ValidationResult>(() =>
+                {
+                    var result = new ValidationResult();
+                    result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
 
-                return result;
+                    return result;
+                });
             }
         }
 
@@ -203,20 +161,23 @@ namespace InventoryManager.API.Controllers
         /// <returns>The ValidationResult.</returns>
         // DELETE api/<InventoryListController>/5
         [HttpDelete("{id}")]
-        public ValidationResult Delete(int id)
+        public async Task<ValidationResult> Delete(int id)
         {
             try
             {
-                return _service.Delete(id);
+                return await _service.DeleteAsync(id);
             }
             catch (System.Exception e)
             {
                 _logger.LogInformation(e.Message);
 
-                var result = new ValidationResult();
-                result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
+                return await new Task<ValidationResult>(() =>
+                {
+                    var result = new ValidationResult();
+                    result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
 
-                return result;
+                    return result;
+                });
             }
         }
 
@@ -227,20 +188,23 @@ namespace InventoryManager.API.Controllers
         /// <returns>The ValidationResult.</returns>
         // DELETE api/<InventoryListController>/DeleteByName/name
         [HttpDelete("DeleteByName/{name}")]
-        public ValidationResult DeleteByName(string name)
+        public async Task<ValidationResult> DeleteByName(string name)
         {
             try
             {
-                return _service.DeleteByName(name);
+                return await _service.DeleteByNameAsync(name);
             }
             catch (System.Exception e)
             {
                 _logger.LogInformation(e.Message);
 
-                var result = new ValidationResult();
-                result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
+                return await new Task<ValidationResult>(() =>
+                {
+                    var result = new ValidationResult();
+                    result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
 
-                return result;
+                    return result;
+                });
             }
         }
     }

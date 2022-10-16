@@ -3,11 +3,12 @@ using InventoryManager.API.Configurations;
 using InventoryManager.API.Security;
 using InventoryManager.Application.DTOs;
 using InventoryManager.Application.Services;
-using InventoryManager.Domain.Domain.Services;
+using InventoryManager.Domain.Services;
 using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repository.Contracts;
 using InventoryManager.Infrastructure;
 using Microsoft.AspNetCore.Authentication;
+using MediatR;
 
 namespace InventoryManager
 {
@@ -27,10 +28,12 @@ namespace InventoryManager
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddScoped<IInventoryAppService, InventoryAppService>();
+            builder.Services.AddScoped<IInventoryAppService, InventoryCQRSAppService>();
             builder.Services.AddScoped<IInventoryDomainService, InventoryDomainService>();
             builder.Services.AddSingleton<IRepository<InventoryItem>, InventoryManagerInMemoryRepository>();
 
+            // Adding MediatR for Domain Events and Notifications
+            builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddScoped<IValidator<InventoryItemDTO>, InventoryItemDTOValidator>();
 
             builder.Services.AddAutoMapperConfiguration();

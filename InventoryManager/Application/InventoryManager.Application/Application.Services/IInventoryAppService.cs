@@ -13,45 +13,7 @@ namespace InventoryManager.Application.Services
         /// </summary>
         /// <returns></returns>
         InventoryItemDTO GetBussinessInventoryItemExample();
-
-        /// <summary>
-        /// Create a inventory Item
-        /// </summary>
-        /// <param name="inventoryItemDTO"></param>
-        ValidationResult Create(InventoryItemDTO inventoryItemDTO);
-
-        /// <summary>
-        /// Update a inventory Item
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="inventoryItemDTO"></param>
-        ValidationResult Update(int id, InventoryItemDTO inventoryItemDTO);
-
-        /// <summary>
-        /// Delete a inventory Item 
-        /// </summary>
-        /// <param name="id"></param>
-        ValidationResult Delete(int id);
-
-        // <summary>
-        /// Delete a inventory Item by a name
-        /// </summary>
-        /// <param name="name"></param>
-        ValidationResult DeleteByName(string name);
-
-        /// <summary>
-        /// Get inventory item by identifier
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        InventoryItemDTO GetInventoryItem(int id);
-
-        /// <summary>
-        /// Get all inventory items
-        /// </summary>
-        /// <returns></returns>
-        List<InventoryItemDTO> GetAllInventoryItems();
-
+          
         /// <summary>
         /// Create a inventory Item
         /// </summary>
@@ -70,6 +32,12 @@ namespace InventoryManager.Application.Services
         /// </summary>
         /// <param name="id"></param>
         Task<ValidationResult> DeleteAsync(int id);
+
+        /// <summary>
+        /// Delete a inventory Item 
+        /// </summary>
+        /// <param name="id"></param>
+        Task<ValidationResult> DeleteByNameAsync(string name);
 
         /// <summary>
         /// Get inventory item by identifier

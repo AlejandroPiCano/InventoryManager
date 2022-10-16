@@ -1,6 +1,6 @@
 ﻿using InventoryManager.Domain.Entities;
 
-namespace InventoryManager.Domain.Domain.Services
+namespace InventoryManager.Domain.Services
 {
     /// <summary>
     /// The Inventory Domain Service
