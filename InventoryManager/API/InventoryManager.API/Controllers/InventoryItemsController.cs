@@ -17,7 +17,7 @@ namespace InventoryManager.API.Controllers
         /// <summary>
         ///  The IInventory List Service.
         /// </summary>
-        private readonly IInventoryListService _service;
+        private readonly IInventoryAppService _service;
 
         /// <summary>
         /// The Inventory Items Controller.
@@ -29,7 +29,7 @@ namespace InventoryManager.API.Controllers
         /// </summary>
         /// <param name="service"></param>
         /// <param name="logger"></param>
-        public InventoryItemsController(IInventoryListService service, ILogger<InventoryItemsController> logger)
+        public InventoryItemsController(IInventoryAppService service, ILogger<InventoryItemsController> logger)
         {
             this._service = service;
             this._logger = logger;

@@ -10,10 +10,10 @@ namespace InventoryManager.Domain.Domain.Services
         /// <summary>
         /// Get bussiness Inventory item. Only for example.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The Inventory item</returns>
         public InventoryItem GetBussinessInventoryItemExample()
         {
-            return new BussinessInventoryItem() { Name = "Bussiness Item", Id = -999, ExpirationDate = DateTime.MaxValue };
+            return new InventoryItem() { Name = "Bussiness Item", Id = -999, ExpirationDate = DateTime.MaxValue };
         }
     }
 }

@@ -1,5 +1,6 @@
 using FluentValidation;
-using InventoryManager.API;
+using InventoryManager.API.Configurations;
+using InventoryManager.API.Security;
 using InventoryManager.Application.DTOs;
 using InventoryManager.Application.Services;
 using InventoryManager.Domain.Domain.Services;
@@ -26,15 +27,18 @@ namespace InventoryManager
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddScoped<IInventoryListService, InventoryListService>();
+            builder.Services.AddScoped<IInventoryAppService, InventoryAppService>();
             builder.Services.AddScoped<IInventoryDomainService, InventoryDomainService>();
             builder.Services.AddSingleton<IRepository<InventoryItem>, InventoryManagerInMemoryRepository>();
 
             builder.Services.AddScoped<IValidator<InventoryItemDTO>, InventoryItemDTOValidator>();
 
+            builder.Services.AddAutoMapperConfiguration();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
 
             // Basic authentication
             builder.Services.AddAuthentication("BasicAuthentication")

@@ -18,11 +18,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure.Entities/InventoryManager.Infrastructure.Entities/DefaultInventoryItem.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure.Entities/InventoryManager.Infrastructure.Entities/InMemoryInventoryItem.cs",
                 "region": {
-                  "startLine": 8,
+                  "startLine": 18,
                   "startColumn": 23,
-                  "endLine": 8,
+                  "endLine": 18,
                   "endColumn": 27
                 }
               }
@@ -31,11 +31,11 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure.Entities/InventoryManager.Infrastructure.Entities/DefaultInventoryItem.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure.Entities/InventoryManager.Infrastructure.Entities/InMemoryInventoryItem.cs",
                 "region": {
-                  "startLine": 8,
+                  "startLine": 18,
                   "startColumn": 23,
-                  "endLine": 8,
+                  "endLine": 18,
                   "endColumn": 27
                 }
               }

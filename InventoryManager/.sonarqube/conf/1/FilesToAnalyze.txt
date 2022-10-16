@@ -1,2 +1,3 @@
-﻿C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\BussinessInventoryItem.cs
-C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\InventoryItem.cs
+﻿C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\DTO.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTO.cs
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTOValidator.cs

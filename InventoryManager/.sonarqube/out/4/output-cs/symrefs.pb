@@ -1,73 +1,135 @@
-û
-ÉC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain\Domain.Services\IInventoryDomainService.cs
+≥
+êC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\IInventoryListService.cs
 
-
-
- ,
+ *
 
- 6ù
-ÇC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain\Domain.Services\InventoryDomainService.cs
+ 9
 
-
-
- '
+ 
 
- =Ñ
-|C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain\Repository.Contracts\IRepository.cs
+1 A
 
-  d
-! "
-
- 	   ## (( // 66! "NN 	
+ 
 
-
-
-
- 
+$ &
 
-
-
- 
+9 I
 
- 
+ 
 
- 
+$ &
 
- 
+%% %
 
- !
+%%- 1
 
-## 
+,, )
 
-## 
+,,. 0
 
-(( 
+22 3
 
-(( !
+88 *
 
-// 
+88< L
 
-// 
+?? *
 
-// $
+??/ 1
 
-66 
+??D T
 
-66 
+EE *
 
-66# )
+EE/ 1
 
-<< 
+LL 4
 
-<< 
+LL9 ;
 
-BB 
+RR% >º	
+èC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\InventoryListService.cs
 
-BB! %
+ %
+) C +((J d∫
+, C (44 ,	44z ë@@ (KK /UU% <ee ,	ee~ ïmm$ ;xx 2
+xxÖ ú
+ÑÑ 2ÑÑâ †
+åå .
+ìì+ B
+öö (>
+. 7 00& /aa& /tt& /
+ÄÄ& /
+< V. H
+	s ä+ B
 
-HH 
+© ≤ &
 
-HH 
+&&/ O
 
-NN
- 
+../ 5
+..G W009 I44h x
+00 #22 77 
+
+>>/ 5
+>>: <@@0 2
+
+II5 I
+KK@ AKK| }
+
+SS/ ?
+SSD FUUA C
+UU WWJ W
+
+__/ 5
+__: <ee4 6
+__O _aa9 Ieel |
+aa #cc hh 
+
+kk2 K
+mm oo 
+oo! "oo] ^
+
+rr, 7
+rrI Ytt9 I	xxs É
+tt #vv {{ 
+
+~~, 7
+~~< >
+ÑÑ? A#
+~~Q a
+ÄÄ9 IÑÑw á$
+
+ÄÄ #
+ÇÇ 
+áá 
+
+ää, 7
+
+ää< >
+åå; =
+
+ëë, A
+
+ëëF H
+ììL N
+
+ìì 
+ïïJ W
+
+òò  ,
+
+òò4 8
+öö6 :Ù
+|C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\InventoryItemConverter.cs
+
+		 0
+
+) H<
+W d  " $! . $
+
+##& B<
+##T d%%  ((+ ;)) ,**& 6++ ,<
+##t |(( )) ** ++ -- 
+
+##É ç(( $

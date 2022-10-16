@@ -1,913 +1,1260 @@
-’
-êC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\IInventoryListService.cs
-	namespace 	
-InventoryManager
- 
-. 
-Application &
-.& '
-Services' /
-{ 
-public 
-
-	interface !
-IInventoryListService *
-{ 
-InventoryItemDTO ,
- GetBussinessInventoryItemExample 9
-(9 :
-): ;
-;; <
-ValidationResultDTO 
-Create "
-(" #
-InventoryItemDTO# 3
-inventoryItemDTO4 D
-)D E
-;E F
-ValidationResultDTO 
-Update "
-(" #
-int# &
-id' )
-,) *
-InventoryItemDTO+ ;
-inventoryItemDTO< L
-)L M
-;M N
-ValidationResultDTO 
-Delete "
-(" #
-int# &
-id' )
-)) *
-;* +
-ValidationResultDTO$$ 
-DeleteByName$$ (
-($$( )
-string$$) /
-name$$0 4
-)$$4 5
-;$$5 6
-InventoryItemDTO++ 
-GetInventoryItem++ )
-(++) *
-int++* -
-id++. 0
-)++0 1
-;++1 2
-List11 
-<11 
-InventoryItemDTO11 
->11  
-GetAllInventoryItems11 3
-(113 4
-)114 5
-;115 6
-Task77 
-<77 
-ValidationResultDTO77  
->77  !
-CreateAsync77" -
-(77- .
-InventoryItemDTO77. >
-inventoryItemDTO77? O
-)77O P
-;77P Q
-Task>> 
-<>> 
-ValidationResultDTO>>  
->>>  !
-UpdateAsync>>" -
-(>>- .
-int>>. 1
-id>>2 4
-,>>4 5
-InventoryItemDTO>>6 F
-inventoryItemDTO>>G W
-)>>W X
-;>>X Y
-TaskDD 
-<DD 
-ValidationResultDTODD  
->DD  !
-DeleteAsyncDD" -
-(DD- .
-intDD. 1
-idDD2 4
-)DD4 5
-;DD5 6
-TaskKK 
-<KK 
-InventoryItemDTOKK 
->KK !
-GetInventoryItemAsyncKK 4
-(KK4 5
-intKK5 8
-idKK9 ;
-)KK; <
-;KK< =
-TaskQQ 
-<QQ 
-ListQQ 
-<QQ 
-InventoryItemDTOQQ "
->QQ" #
->QQ# $%
-GetAllInventoryItemsAsyncQQ% >
-(QQ> ?
-)QQ? @
-;QQ@ A
-}RR 
-}SS ÄV
-èC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\InventoryListService.cs
+òf
+zC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Controllers\InventoryItemsController.cs
 	namespace 	
 InventoryManager
  
-. 
-Application &
-.& '
-Services' /
-{ 
-public 
+. 
+API 
+. 
+Controllers *
+{ 
+[ 
+Route 
+
+(
+ 
+$str 
+) 
+] 
+[ 
+ApiController 
+] 
+public 
 
-class  
-InventoryListService %
-:& '!
-IInventoryListService( =
-{		 
-readonly
-
- #
-IInventoryDomainService
-
- (&
-inventoryListDomainService
-
-) C
-;
-
-C D
-readonly 
-IRepository 
-< 
-InventoryItem *
->* +#
-inventoryListRepository, C
-;C D
-public  
-InventoryListService #
-(# $#
-IInventoryDomainService$ ;&
-inventoryListDomainService< V
-,V W
-IRepositoryX c
-<c d
-InventoryItemd q
->q r$
-inventoryListRepository	s ä
-)
-ä ã
-{ 	
-this 
-. &
-inventoryListDomainService +
-=, -&
-inventoryListDomainService. H
-;H I
-this 
-. #
-inventoryListRepository (
-=) *#
-inventoryListRepository+ B
-;B C
-} 	
-InventoryItemDTO !
-IInventoryListService .
-.. /,
- GetBussinessInventoryItemExample/ O
-(O P
-)P Q
-{ 	
-return "
-InventoryItemConverter )
-.) *+
-ConvertInventoryItemEntityToDTO* I
-(I J&
-inventoryListDomainServiceJ d
-.d e-
- GetBussinessInventoryItemExample	e Ö
-(
-Ö Ü
-)
-Ü á
-)
-á à
-;
-à â
-} 	
-ValidationResultDTO!! !
-IInventoryListService!! 1
-.!!1 2
-Create!!2 8
-(!!8 9
-InventoryItemDTO!!9 I
-inventoryItemDTO!!J Z
-)!!Z [
-{"" 	
-var## 
-result## 
-=## 
-inventoryItemDTO## )
-.##) *
-CheckValidation##* 9
-(##9 :
-)##: ;
-;##; <
-if%% 
-(%% 
-result%% 
-.%% 
-Result%% 
-==%%  
-ResultTypeDTO%%! .
-.%%. /
-Ok%%/ 1
-)%%1 2
-{&& 
-this'' 
-.'' #
-inventoryListRepository'' ,
-.'', -
-Create''- 3
-(''3 4"
-InventoryItemConverter''4 J
-.''J K(
-ConvertInventoryDTOToEntitiy''K g
-(''g h
-inventoryItemDTO''h x
-,''x y$
-inventoryListRepository	''z ë
-.
-''ë í
-GetNew
-''í ò
-(
-''ò ô
-)
-''ô ö
-,
-''ö õ
-true
-''ú †
-)
-''† °
-)
-''° ¢
-;
-''¢ £
-}(( 
-return** 
-result** 
-;** 
-}++ 	
-ValidationResultDTO11 !
-IInventoryListService11 1
-.111 2
-Delete112 8
-(118 9
-int119 <
-id11= ?
-)11? @
-{22 	
-this33 
-.33 #
-inventoryListRepository33 (
-.33( )
-Delete33) /
-(33/ 0
-id330 2
-)332 3
-;333 4
-return55 
-new55 
-ValidationResultDTO55 *
-(55* +
-)55+ ,
-;55, -
-}66 	
-List<< 
-<<< 
-InventoryItemDTO<< 
-><< !
-IInventoryListService<< 4
-.<<4 5 
-GetAllInventoryItems<<5 I
-(<<I J
-)<<J K
-{== 	
-return>> 
-this>> 
-.>> #
-inventoryListRepository>> /
-.>>/ 0
-GetAll>>0 6
-(>>6 7
-)>>7 8
-.>>8 9
-Select>>9 ?
-(>>? @
-i>>@ A
-=>>>B D"
-InventoryItemConverter>>E [
-.>>[ \+
-ConvertInventoryItemEntityToDTO>>\ {
-(>>{ |
-i>>| }
-)>>} ~
-)>>~ 
-.	>> Ä
-ToList
->>Ä Ü
-(
->>Ü á
-)
->>á à
-;
->>à â
-}?? 	
-InventoryItemDTOFF !
-IInventoryListServiceFF .
-.FF. /
-GetInventoryItemFF/ ?
-(FF? @
-intFF@ C
-idFFD F
-)FFF G
-{GG 	
-varHH 
-inventoryItemHH 
-=HH 
-thisHH  $
-.HH$ %#
-inventoryListRepositoryHH% <
-.HH< =
-GetHH= @
-(HH@ A
-idHHA C
-)HHC D
-;HHD E
-returnJJ "
-InventoryItemConverterJJ )
-.JJ) *+
-ConvertInventoryItemEntityToDTOJJ* I
-(JJI J
-inventoryItemJJJ W
-)JJW X
-;JJX Y
-}KK 	
-ValidationResultDTORR !
-IInventoryListServiceRR 1
-.RR1 2
-UpdateRR2 8
-(RR8 9
-intRR9 <
-idRR= ?
-,RR? @
-InventoryItemDTORRA Q
-inventoryItemDTORRR b
-)RRb c
-{SS 	
-varTT 
-resultTT 
-=TT 
-inventoryItemDTOTT )
-.TT) *
-CheckValidationTT* 9
-(TT9 :
-)TT: ;
-;TT; <
-ifVV 
-(VV 
-resultVV 
-.VV 
-ResultVV 
-==VV  
-ResultTypeDTOVV! .
-.VV. /
-OkVV/ 1
-)VV1 2
-{WW 
-thisXX 
-.XX #
-inventoryListRepositoryXX ,
-.XX, -
-UpdateXX- 3
-(XX3 4
-idXX4 6
-,XX6 7"
-InventoryItemConverterXX8 N
-.XXN O(
-ConvertInventoryDTOToEntitiyXXO k
-(XXk l
-inventoryItemDTOXXl |
-,XX| }$
-inventoryListRepository	XX~ ï
-.
-XXï ñ
-GetNew
-XXñ ú
-(
-XXú ù
-)
-XXù û
-)
-XXû ü
-)
-XXü †
-;
-XX† °
-}YY 
-return[[ 
-result[[ 
-;[[ 
-}\\ 	
-public^^ 
-async^^ 
-Task^^ 
-<^^ 
-List^^ 
-<^^ 
-InventoryItemDTO^^ /
->^^/ 0
->^^0 1%
-GetAllInventoryItemsAsync^^2 K
-(^^K L
-)^^L M
-{__ 	
-var`` 
-result`` 
-=`` 
-await`` 
-this`` #
-.``# $#
-inventoryListRepository``$ ;
-.``; <
-GetAllAsync``< G
-(``G H
-)``H I
-;``I J
-returnbb 
-resultbb 
-.bb 
-Selectbb  
-(bb  !
-ibb! "
-=>bb# %"
-InventoryItemConverterbb& <
-.bb< =+
-ConvertInventoryItemEntityToDTObb= \
-(bb\ ]
-ibb] ^
-)bb^ _
-)bb_ `
-.bb` a
-ToListbba g
-(bbg h
-)bbh i
-;bbi j
-}cc 	
-publicee 
-asyncee 
-Taskee 
-<ee 
-ValidationResultDTOee -
->ee- .
-CreateAsyncee/ :
-(ee: ;
-InventoryItemDTOee; K
-inventoryItemDTOeeL \
-)ee\ ]
-{ff 	
-vargg 
-resultgg 
-=gg 
-inventoryItemDTOgg )
-.gg) *
-CheckValidationgg* 9
-(gg9 :
-)gg: ;
-;gg; <
-ifii 
-(ii 
-resultii 
-.ii 
-Resultii 
-==ii  
-ResultTypeDTOii! .
-.ii. /
-Okii/ 1
-)ii1 2
-{jj 
-awaitkk 
-thiskk 
-.kk #
-inventoryListRepositorykk 2
-.kk2 3
-CreateAsynckk3 >
-(kk> ?"
-InventoryItemConverterkk? U
-.kkU V(
-ConvertInventoryDTOToEntitiykkV r
-(kkr s
-inventoryItemDTO	kks É
-,
-kkÉ Ñ%
-inventoryListRepository
-kkÖ ú
-.
-kkú ù
-GetNew
-kkù £
-(
-kk£ §
-)
-kk§ •
-,
-kk• ¶
-true
-kkß ´
-)
-kk´ ¨
-)
-kk¨ ≠
-;
-kk≠ Æ
-}ll 
-returnnn 
-resultnn 
-;nn 
-}oo 	
-publicqq 
-asyncqq 
-Taskqq 
-<qq 
-ValidationResultDTOqq -
->qq- .
-UpdateAsyncqq/ :
-(qq: ;
-intqq; >
-idqq? A
-,qqA B
-InventoryItemDTOqqC S
-inventoryItemDTOqqT d
-)qqd e
-{rr 	
-varss 
-resultss 
-=ss 
-inventoryItemDTOss )
-.ss) *
-CheckValidationss* 9
-(ss9 :
-)ss: ;
-;ss; <
-ifuu 
-(uu 
-resultuu 
-.uu 
-Resultuu 
-==uu  
-ResultTypeDTOuu! .
-.uu. /
-Okuu/ 1
-)uu1 2
-{vv 
-awaitww 
-thisww 
-.ww #
-inventoryListRepositoryww 2
-.ww2 3
-UpdateAsyncww3 >
-(ww> ?
-idww? A
-,wwA B"
-InventoryItemConverterwwC Y
-.wwY Z(
-ConvertInventoryDTOToEntitiywwZ v
-(wwv w
-inventoryItemDTO	www á
-,
-wwá à%
-inventoryListRepository
-wwâ †
-.
-ww† °
-GetNew
-ww° ß
-(
-wwß ®
-)
-ww® ©
-)
-ww© ™
-)
-ww™ ´
-;
-ww´ ¨
-}xx 
-returnzz 
-resultzz 
-;zz 
-}{{ 	
-public}} 
-async}} 
-Task}} 
-<}} 
-ValidationResultDTO}} -
->}}- .
-DeleteAsync}}/ :
-(}}: ;
-int}}; >
-id}}? A
-)}}A B
-{~~ 	
-await 
-this 
-. #
-inventoryListRepository .
-.. /
-DeleteAsync/ :
-(: ;
-id; =
-)= >
-;> ?
-return
-ÅÅ 
-new
-ÅÅ !
-ValidationResultDTO
-ÅÅ *
-(
-ÅÅ* +
-)
-ÅÅ+ ,
-;
-ÅÅ, -
-}
-ÇÇ 	
+class $
+InventoryItemsController )
+:* +
+ControllerBase, :
+{ 
+private 
+readonly !
+IInventoryListService .
+_service/ 7
+;7 8
+private 
+readonly 
+ILogger  
+<  !$
+InventoryItemsController! 9
+>9 :
+_logger; B
+;B C
+public $
+InventoryItemsController '
+(' (!
+IInventoryListService( =
+service> E
+,E F
+ILoggerG N
+<N O$
+InventoryItemsControllerO g
+>g h
+loggeri o
+)o p
+{ 	
+this   
+.   
+_service   
+=   
+service   #
+;  # $
+this!! 
+.!! 
+_logger!! 
+=!! 
+logger!! !
+;!!! "
+}"" 	
+[)) 	
+HttpGet))	 
+])) 
+public** 
+IEnumerable** 
+<** 
+InventoryItemDTO** +
+>**+ ,
+Get**- 0
+(**0 1
+)**1 2
+{++ 	
+IEnumerable,, 
+<,, 
+InventoryItemDTO,, (
+>,,( )
+result,,* 0
+=,,1 2
+null,,3 7
+;,,7 8
+try.. 
+{// 
+result00 
+=00 
+_service00 !
+.00! " 
+GetAllInventoryItems00" 6
+(006 7
+)007 8
+;008 9
+}11 
+catch22 
+(22 
+System22 
+.22 
+	Exception22 #
+e22$ %
+)22% &
+{33 
+_logger44 
+.44 
+LogInformation44 &
+(44& '
+e44' (
+.44( )
+Message44) 0
+)440 1
+;441 2
+}55 
+return77 
+result77 
+;77 
+}88 	
+[>> 	
+HttpGet>>	 
+(>> 
+$str>> 
+)>> 
+]>> 
+public?? 
+async?? 
+Task?? 
+<?? 
+IEnumerable?? %
+<??% &
+InventoryItemDTO??& 6
+>??6 7
+>??7 8
+GetAsync??9 A
+(??A B
+)??B C
+{@@ 	
+TaskAA 
+<AA 
+ListAA 
+<AA 
+InventoryItemDTOAA &
+>AA& '
+>AA' (
+?AA( )
+resultAA* 0
+=AA1 2
+nullAA3 7
+;AA7 8
+tryCC 
+{DD 
+resultEE 
+=EE 
+_serviceEE !
+.EE! "%
+GetAllInventoryItemsAsyncEE" ;
+(EE; <
+)EE< =
+;EE= >
+}FF 
+catchGG 
+(GG 
+SystemGG 
+.GG 
+	ExceptionGG #
+eGG$ %
+)GG% &
+{HH 
+_loggerII 
+.II 
+LogInformationII &
+(II& '
+eII' (
+.II( )
+MessageII) 0
+)II0 1
+;II1 2
+}JJ 
+returnLL 
+awaitLL 
+resultLL 
+;LL  
+}MM 	
+[UU 	
+HttpGetUU	 
+(UU 
+$strUU 
+)UU 
+]UU 
+publicVV 
+InventoryItemDTOVV 
+GetVV  #
+(VV# $
+intVV$ '
+idVV( *
+)VV* +
+{WW 	
+InventoryItemDTOXX 
+resultXX #
+=XX$ %
+nullXX& *
+;XX* +
+tryZZ 
+{[[ 
+result\\ 
+=\\ 
+_service\\ !
+.\\! "
+GetInventoryItem\\" 2
+(\\2 3
+id\\3 5
+)\\5 6
+;\\6 7
+}]] 
+catch^^ 
+(^^ 
+System^^ 
+.^^ 
+	Exception^^ #
+e^^$ %
+)^^% &
+{__ 
+_logger`` 
+.`` 
+LogInformation`` &
+(``& '
+e``' (
+.``( )
+Message``) 0
+)``0 1
+;``1 2
+}aa 
+returncc 
+resultcc 
+;cc 
+}dd 	
+[kk 	
+HttpGetkk	 
+(kk 
+$strkk 0
+)kk0 1
+]kk1 2
+publicll 
+InventoryItemDTOll ,
+ GetBussinessInventoryItemExamplell  @
+(ll@ A
+)llA B
+{mm 	
+trynn 
+{oo 
+returnpp 
+_servicepp 
+.pp  ,
+ GetBussinessInventoryItemExamplepp  @
+(pp@ A
+)ppA B
+;ppB C
+}qq 
+catchrr 
+(rr 
+Systemrr 
+.rr 
+	Exceptionrr #
+err$ %
+)rr% &
+{ss 
+_loggertt 
+.tt 
+LogInformationtt &
+(tt& '
+ett' (
+.tt( )
+Messagett) 0
+)tt0 1
+;tt1 2
+returnvv 
+nullvv 
+;vv 
+}ww 
+}xx 	
+[
+ÄÄ 	
+HttpPost
+ÄÄ	 
+]
+ÄÄ 
 public
-ÑÑ 
-async
-ÑÑ 
-Task
-ÑÑ 
-<
-ÑÑ 
+ÅÅ 
+ValidationResult
+ÅÅ 
+Post
+ÅÅ  $
+(
+ÅÅ$ %
+[
+ÅÅ% &
+FromBody
+ÅÅ& .
+]
+ÅÅ. /
 InventoryItemDTO
-ÑÑ *
->
-ÑÑ* +#
-GetInventoryItemAsync
-ÑÑ, A
-(
-ÑÑA B
-int
-ÑÑB E
-id
-ÑÑF H
+ÅÅ0 @
+value
+ÅÅA F
 )
-ÑÑH I
+ÅÅF G
 {
-ÖÖ 	
-var
-ÜÜ 
-inventoryItem
-ÜÜ 
-=
-ÜÜ 
-await
-ÜÜ  %
-this
-ÜÜ& *
-.
-ÜÜ* +%
-inventoryListRepository
-ÜÜ+ B
-.
-ÜÜB C
-GetAsync
-ÜÜC K
-(
-ÜÜK L
-id
-ÜÜL N
-)
-ÜÜN O
-;
-ÜÜO P
+ÇÇ 	
+try
+ÉÉ 
+{
+ÑÑ 
 return
-àà $
-InventoryItemConverter
-àà )
+ÖÖ 
+_service
+ÖÖ 
 .
-àà) *-
-ConvertInventoryItemEntityToDTO
-àà* I
+ÖÖ  
+Create
+ÖÖ  &
 (
-ààI J
-inventoryItem
-ààJ W
+ÖÖ& '
+value
+ÖÖ' ,
 )
-ààW X
+ÖÖ, -
 ;
-ààX Y
+ÖÖ- .
 }
-ââ 	
-public
-ãã !
-ValidationResultDTO
-ãã "
-DeleteByName
-ãã# /
+ÜÜ 
+catch
+áá 
 (
-ãã/ 0
-string
-ãã0 6
-name
-ãã7 ;
+áá 
+System
+áá 
+.
+áá 
+	Exception
+áá #
+e
+áá$ %
 )
-ãã; <
+áá% &
 {
-åå 	
-this
-çç 
+àà 
+_logger
+ââ 
 .
-çç %
-inventoryListRepository
-çç (
-.
-çç( )
-DeleteByName
-çç) 5
+ââ 
+LogInformation
+ââ &
 (
-çç5 6
-name
-çç6 :
+ââ& '
+e
+ââ' (
+.
+ââ( )
+Message
+ââ) 0
 )
-çç: ;
+ââ0 1
 ;
-çç; <
-return
-èè 
+ââ1 2
+var
+ãã 
+result
+ãã 
+=
+ãã 
 new
-èè !
-ValidationResultDTO
-èè *
+ãã  
+ValidationResult
+ãã! 1
 (
-èè* +
+ãã1 2
 )
-èè+ ,
+ãã2 3
 ;
-èè, -
+ãã3 4
+result
+åå 
+.
+åå 
+Errors
+åå 
+.
+åå 
+Add
+åå !
+(
+åå! "
+new
+åå" %
+ValidationFailure
+åå& 7
+(
+åå7 8
+String
+åå8 >
+.
+åå> ?
+Empty
+åå? D
+,
+ååD E
+e
+ååF G
+.
+ååG H
+Message
+ååH O
+)
+ååO P
+)
+ååP Q
+;
+ååQ R
+return
+éé 
+result
+éé 
+;
+éé 
+}
+èè 
 }
 êê 	
-}
-íí 
-}ìì «
-|C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\InventoryItemConverter.cs
-	namespace 	
-InventoryManager
- 
-. 
-Application &
-{ 
-internal 
-static 
-class "
-InventoryItemConverter 0
-{ 
-internal 
-static 
-InventoryItemDTO (+
-ConvertInventoryItemEntityToDTO) H
-(H I
-InventoryItemI V
-inventoryItemW d
-)d e
-{ 	
-if 
-( 
-inventoryItem 
-==  
-null! %
-)% &
-return 
-null 
-; 
-return 
-new 
-InventoryItemDTO '
-(' (
-)( )
-{ 
-Id 
-= 
-inventoryItem "
-." #
-Id# %
-,% &
-Name 
-= 
-inventoryItem $
-.$ %
-Name% )
-,) *
-ExpirationDate 
-=  
-inventoryItem! .
-.. /
-ExpirationDate/ =
-,= >
-Type 
-= 
-inventoryItem $
-.$ %
-Type% )
-} 
-; 
-} 	
-internal   
-static   
-InventoryItem   %(
-ConvertInventoryDTOToEntitiy  & B
-(  B C
-InventoryItemDTO  C S
-inventoryItemDTO  T d
-,  d e
-InventoryItem  f s
-instance  t |
-,  | }
-bool	  ~ Ç
-
-isCreation
-  É ç
-=
-  é è
-false
-  ê ï
+[
+òò 	
+HttpPost
+òò	 
+(
+òò 
+$str
+òò 
 )
-  ï ñ
-{!! 	
-if"" 
-("" 
-inventoryItemDTO""  
-==""! #
-null""$ (
-)""( )
-return## 
-null## 
-;## 
-instance%% 
-.%% 
-Id%% 
-=%% 
+òò 
+]
+òò  
+public
+ôô 
+async
+ôô 
+Task
+ôô 
+<
+ôô 
+ValidationResult
+ôô *
+>
+ôô* +
+	PostAsync
+ôô, 5
+(
+ôô5 6
+[
+ôô6 7
+FromBody
+ôô7 ?
+]
+ôô? @
+InventoryItemDTO
+ôôA Q
+value
+ôôR W
+)
+ôôW X
+{
+öö 	
+try
+õõ 
+{
+úú 
+return
+ùù 
+await
+ùù 
+_service
+ùù %
+.
+ùù% &
+CreateAsync
+ùù& 1
+(
+ùù1 2
+value
+ùù2 7
+)
+ùù7 8
+;
+ùù8 9
+}
+ûû 
+catch
+üü 
+(
+üü 
+System
+üü 
+.
+üü 
+	Exception
+üü #
+e
+üü$ %
+)
+üü% &
+{
+†† 
+_logger
+°° 
+.
+°° 
+LogInformation
+°° &
+(
+°°& '
+e
+°°' (
+.
+°°( )
+Message
+°°) 0
+)
+°°0 1
+;
+°°1 2
+return
+££ 
+await
+££ 
+new
+££  
+Task
+££! %
+<
+££% &
+ValidationResult
+££& 6
+>
+££6 7
+(
+££7 8
+(
+££8 9
+)
+££9 :
+=>
+££; =
+{
+§§ 
+var
+•• 
+result
+•• 
+=
+••  
+new
+••! $
+ValidationResult
+••% 5
+(
+••5 6
+)
+••6 7
+;
+••7 8
+result
+¶¶ 
+.
+¶¶ 
+Errors
+¶¶ !
+.
+¶¶! "
+Add
+¶¶" %
+(
+¶¶% &
+new
+¶¶& )
+ValidationFailure
+¶¶* ;
+(
+¶¶; <
+String
+¶¶< B
+.
+¶¶B C
+Empty
+¶¶C H
+,
+¶¶H I
+e
+¶¶J K
+.
+¶¶K L
+Message
+¶¶L S
+)
+¶¶S T
+)
+¶¶T U
+;
+¶¶U V
+return
+®® 
+result
+®® !
+;
+®®! "
+}
+©© 
+)
+©© 
+;
+©© 
+}
+™™ 
+}
+´´ 	
+[
+≥≥ 	
+HttpPut
+≥≥	 
+(
+≥≥ 
+$str
+≥≥ 
+)
+≥≥ 
+]
+≥≥ 
+public
+¥¥ 
+ValidationResult
+¥¥ 
+Put
+¥¥  #
+(
+¥¥# $
+int
+¥¥$ '
+id
+¥¥( *
+,
+¥¥* +
+[
+¥¥, -
+FromBody
+¥¥- 5
+]
+¥¥5 6
+InventoryItemDTO
+¥¥7 G
+value
+¥¥H M
+)
+¥¥M N
+{
+µµ 	
+try
+∂∂ 
+{
+∑∑ 
+return
+∏∏ 
+_service
+∏∏ 
+.
+∏∏  
+Update
+∏∏  &
+(
+∏∏& '
+id
+∏∏' )
+,
+∏∏) *
+value
+∏∏+ 0
+)
+∏∏0 1
+;
+∏∏1 2
+}
+ππ 
+catch
+∫∫ 
+(
+∫∫ 
+System
+∫∫ 
+.
+∫∫ 
+	Exception
+∫∫ #
+e
+∫∫$ %
+)
+∫∫% &
+{
+ªª 
+_logger
+ºº 
+.
+ºº 
+LogInformation
+ºº &
+(
+ºº& '
+e
+ºº' (
+.
+ºº( )
+Message
+ºº) 0
+)
+ºº0 1
+;
+ºº1 2
+var
+ææ 
+result
+ææ 
+=
+ææ 
+new
+ææ  
+ValidationResult
+ææ! 1
+(
+ææ1 2
+)
+ææ2 3
+;
+ææ3 4
+result
+øø 
+.
+øø 
+Errors
+øø 
+.
+øø 
+Add
+øø !
+(
+øø! "
+new
+øø" %
+ValidationFailure
+øø& 7
+(
+øø7 8
+String
+øø8 >
+.
+øø> ?
+Empty
+øø? D
+,
+øøD E
+e
+øøF G
+.
+øøG H
+Message
+øøH O
+)
+øøO P
+)
+øøP Q
+;
+øøQ R
+return
+¡¡ 
+result
+¡¡ 
+;
+¡¡ 
+}
+¬¬ 
+}
+√√ 	
+[
+ÀÀ 	
 
-isCreation%% $
-?%%% &
-$num%%' (
-:%%) *
-inventoryItemDTO%%+ ;
-.%%; <
-Id%%< >
-;%%> ?
-instance&& 
-.&& 
-Name&& 
-=&& 
-inventoryItemDTO&& ,
-.&&, -
-Name&&- 1
-;&&1 2
-instance'' 
-.'' 
-ExpirationDate'' #
-=''$ %
-inventoryItemDTO''& 6
-.''6 7
-ExpirationDate''7 E
-;''E F
-instance(( 
-.(( 
-Type(( 
-=(( 
-inventoryItemDTO(( ,
-.((, -
-Type((- 1
-;((1 2
-return** 
-instance** 
-;** 
-}++ 	
-},, 
-}-- 
+HttpDelete
+ÀÀ	 
+(
+ÀÀ 
+$str
+ÀÀ 
+)
+ÀÀ 
+]
+ÀÀ 
+public
+ÃÃ 
+ValidationResult
+ÃÃ 
+Delete
+ÃÃ  &
+(
+ÃÃ& '
+int
+ÃÃ' *
+id
+ÃÃ+ -
+)
+ÃÃ- .
+{
+ÕÕ 	
+try
+ŒŒ 
+{
+œœ 
+return
+–– 
+_service
+–– 
+.
+––  
+Delete
+––  &
+(
+––& '
+id
+––' )
+)
+––) *
+;
+––* +
+}
+—— 
+catch
+““ 
+(
+““ 
+System
+““ 
+.
+““ 
+	Exception
+““ #
+e
+““$ %
+)
+““% &
+{
+”” 
+_logger
+‘‘ 
+.
+‘‘ 
+LogInformation
+‘‘ &
+(
+‘‘& '
+e
+‘‘' (
+.
+‘‘( )
+Message
+‘‘) 0
+)
+‘‘0 1
+;
+‘‘1 2
+var
+÷÷ 
+result
+÷÷ 
+=
+÷÷ 
+new
+÷÷  
+ValidationResult
+÷÷! 1
+(
+÷÷1 2
+)
+÷÷2 3
+;
+÷÷3 4
+result
+◊◊ 
+.
+◊◊ 
+Errors
+◊◊ 
+.
+◊◊ 
+Add
+◊◊ !
+(
+◊◊! "
+new
+◊◊" %
+ValidationFailure
+◊◊& 7
+(
+◊◊7 8
+String
+◊◊8 >
+.
+◊◊> ?
+Empty
+◊◊? D
+,
+◊◊D E
+e
+◊◊F G
+.
+◊◊G H
+Message
+◊◊H O
+)
+◊◊O P
+)
+◊◊P Q
+;
+◊◊Q R
+return
+ŸŸ 
+result
+ŸŸ 
+;
+ŸŸ 
+}
+⁄⁄ 
+}
+€€ 	
+[
+„„ 	
+
+HttpDelete
+„„	 
+(
+„„ 
+$str
+„„ *
+)
+„„* +
+]
+„„+ ,
+public
+‰‰ 
+ValidationResult
+‰‰ 
+DeleteByName
+‰‰  ,
+(
+‰‰, -
+string
+‰‰- 3
+name
+‰‰4 8
+)
+‰‰8 9
+{
+ÂÂ 	
+try
+ÊÊ 
+{
+ÁÁ 
+return
+ËË 
+_service
+ËË 
+.
+ËË  
+DeleteByName
+ËË  ,
+(
+ËË, -
+name
+ËË- 1
+)
+ËË1 2
+;
+ËË2 3
+}
+ÈÈ 
+catch
+ÍÍ 
+(
+ÍÍ 
+System
+ÍÍ 
+.
+ÍÍ 
+	Exception
+ÍÍ #
+e
+ÍÍ$ %
+)
+ÍÍ% &
+{
+ÎÎ 
+_logger
+ÏÏ 
+.
+ÏÏ 
+LogInformation
+ÏÏ &
+(
+ÏÏ& '
+e
+ÏÏ' (
+.
+ÏÏ( )
+Message
+ÏÏ) 0
+)
+ÏÏ0 1
+;
+ÏÏ1 2
+var
+ÓÓ 
+result
+ÓÓ 
+=
+ÓÓ 
+new
+ÓÓ  
+ValidationResult
+ÓÓ! 1
+(
+ÓÓ1 2
+)
+ÓÓ2 3
+;
+ÓÓ3 4
+result
+ÔÔ 
+.
+ÔÔ 
+Errors
+ÔÔ 
+.
+ÔÔ 
+Add
+ÔÔ !
+(
+ÔÔ! "
+new
+ÔÔ" %
+ValidationFailure
+ÔÔ& 7
+(
+ÔÔ7 8
+String
+ÔÔ8 >
+.
+ÔÔ> ?
+Empty
+ÔÔ? D
+,
+ÔÔD E
+e
+ÔÔF G
+.
+ÔÔG H
+Message
+ÔÔH O
+)
+ÔÔO P
+)
+ÔÔP Q
+;
+ÔÔQ R
+return
+ÒÒ 
+result
+ÒÒ 
+;
+ÒÒ 
+}
+ÚÚ 
+}
+ÛÛ 	
+}
+ÙÙ 
+}ıı †
+]C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Program.cs
+	namespace		 	
+InventoryManager		
+ 
+{
+
+ 
+public 
+
+class 
+Program 
+{ 
+public 
+static 
+void 
+Main 
+(  
+string  &
+[& '
+]' (
+args) -
+)- .
+{ 	
+var 
+builder 
+= 
+WebApplication (
+.( )
+CreateBuilder) 6
+(6 7
+args7 ;
+); <
+;< =
+builder 
+. 
+Services 
+. 
+AddControllers +
+(+ ,
+), -
+;- .
+builder 
+. 
+Services 
+. 
+	AddScoped &
+<& '!
+IInventoryListService' <
+,< = 
+InventoryListService> R
+>R S
+(S T
+)T U
+;U V
+builder 
+. 
+Services 
+. 
+	AddScoped &
+<& '#
+IInventoryDomainService' >
+,> ?"
+InventoryDomainService@ V
+>V W
+(W X
+)X Y
+;Y Z
+builder 
+. 
+Services 
+. 
+AddSingleton )
+<) *
+IRepository* 5
+<5 6
+InventoryItem6 C
+>C D
+,D E.
+"InventoryManagerInMemoryRepositoryF h
+>h i
+(i j
+)j k
+;k l
+builder 
+. 
+Services 
+. 
+	AddScoped &
+<& '
+
+IValidator' 1
+<1 2
+InventoryItemDTO2 B
+>B C
+,C D%
+InventoryItemDTOValidatorE ^
+>^ _
+(_ `
+)` a
+;a b
+builder"" 
+."" 
+Services"" 
+."" #
+AddEndpointsApiExplorer"" 4
+(""4 5
+)""5 6
+;""6 7
+builder## 
+.## 
+Services## 
+.## 
+AddSwaggerGen## *
+(##* +
+)##+ ,
+;##, -
+var%% 
+app%% 
+=%% 
+builder%% 
+.%% 
+Build%% #
+(%%# $
+)%%$ %
+;%%% &
+if(( 
+((( 
+app(( 
+.(( 
+Environment(( 
+.((  
+IsDevelopment((  -
+(((- .
+)((. /
+)((/ 0
+{)) 
+app** 
+.** 
+
+UseSwagger** 
+(** 
+)**  
+;**  !
+app++ 
+.++ 
+UseSwaggerUI++  
+(++  !
+)++! "
+;++" #
+},, 
+app.. 
+... 
+UseAuthorization..  
+(..  !
+)..! "
+;.." #
+app11 
+.11 
+MapControllers11 
+(11 
+)11  
+;11  !
+app33 
+.33 
+Run33 
+(33 
+)33 
+;33 
+}44 	
+}55 
+}66 

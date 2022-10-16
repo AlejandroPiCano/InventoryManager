@@ -14,57 +14,57 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'void List<DefaultInventoryItem>.Add(DefaultInventoryItem item)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 28,
-                  "endLine": 22,
-                  "endColumn": 58
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'void List<DefaultInventoryItem>.Add(DefaultInventoryItem item)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
-                "region": {
-                  "startLine": 30,
-                  "startColumn": 50,
-                  "endLine": 30,
-                  "endColumn": 80
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'bool List<DefaultInventoryItem>.Remove(DefaultInventoryItem item)'.",
+          "message": "Possible null reference argument for parameter 'item' in 'void List<InMemoryInventoryItem>.Add(InMemoryInventoryItem item)'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
                   "startLine": 35,
-                  "startColumn": 31,
+                  "startColumn": 28,
                   "endLine": 35,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'void List<InMemoryInventoryItem>.Add(InMemoryInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 50,
+                  "endLine": 49,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'item' in 'bool List<InMemoryInventoryItem>.Remove(InMemoryInventoryItem item)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 31,
+                  "endLine": 58,
                   "endColumn": 58
                 }
               }
@@ -77,15 +77,15 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'bool List<DefaultInventoryItem>.Remove(DefaultInventoryItem item)'.",
+          "message": "Possible null reference argument for parameter 'item' in 'bool List<InMemoryInventoryItem>.Remove(InMemoryInventoryItem item)'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 40,
+                  "startLine": 68,
                   "startColumn": 53,
-                  "endLine": 40,
+                  "endLine": 68,
                   "endColumn": 80
                 }
               }
@@ -104,9 +104,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 45,
+                  "startLine": 78,
                   "startColumn": 20,
-                  "endLine": 45,
+                  "endLine": 78,
                   "endColumn": 47
                 }
               }
@@ -125,9 +125,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 60,
+                  "startLine": 106,
                   "startColumn": 50,
-                  "endLine": 60,
+                  "endLine": 106,
                   "endColumn": 77
                 }
               }
@@ -140,15 +140,15 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'int List<DefaultInventoryItem>.IndexOf(DefaultInventoryItem item)'.",
+          "message": "Possible null reference argument for parameter 'item' in 'int List<InMemoryInventoryItem>.IndexOf(InMemoryInventoryItem item)'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 70,
+                  "startLine": 125,
                   "startColumn": 39,
-                  "endLine": 70,
+                  "endLine": 125,
                   "endColumn": 66
                 }
               }
@@ -167,10 +167,10 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 72,
+                  "startLine": 127,
                   "startColumn": 33,
-                  "endLine": 72,
-                  "endColumn": 63
+                  "endLine": 127,
+                  "endColumn": 64
                 }
               }
             }
@@ -182,15 +182,15 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'int List<DefaultInventoryItem>.IndexOf(DefaultInventoryItem item)'.",
+          "message": "Possible null reference argument for parameter 'item' in 'int List<InMemoryInventoryItem>.IndexOf(InMemoryInventoryItem item)'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 79,
+                  "startLine": 140,
                   "startColumn": 43,
-                  "endLine": 79,
+                  "endLine": 140,
                   "endColumn": 70
                 }
               }
@@ -209,10 +209,10 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 81,
+                  "startLine": 142,
                   "startColumn": 37,
-                  "endLine": 81,
-                  "endColumn": 67
+                  "endLine": 142,
+                  "endColumn": 68
                 }
               }
             }
@@ -224,15 +224,15 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'bool List<DefaultInventoryItem>.Remove(DefaultInventoryItem item)'.",
+          "message": "Possible null reference argument for parameter 'item' in 'bool List<InMemoryInventoryItem>.Remove(InMemoryInventoryItem item)'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 87,
+                  "startLine": 152,
                   "startColumn": 31,
-                  "endLine": 87,
+                  "endLine": 152,
                   "endColumn": 62
                 }
               }
@@ -251,10 +251,10 @@
               "resultFile": {
                 "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Infrastructure/InventoryManager.Infrastructure/InventoryManagerInMemoryRepository.cs",
                 "region": {
-                  "startLine": 10,
-                  "startColumn": 44,
-                  "endLine": 10,
-                  "endColumn": 49
+                  "startLine": 15,
+                  "startColumn": 45,
+                  "endLine": 15,
+                  "endColumn": 50
                 }
               }
             }

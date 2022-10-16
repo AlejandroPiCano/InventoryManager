@@ -21,11 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManager.API", "API
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManager.Domain.Entities", "Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities.csproj", "{4FC10E5C-7481-425E-8713-00B9DC9D1959}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManager.Infrastructure.Entities", "Infrastructure\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities.csproj", "{DBE4DB63-FA0F-4E94-A7A8-2C8B9C1CE13C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManager.API.Tests", "API\InventoryManager.API.Tests\InventoryManager.API.Tests.csproj", "{89EFD52F-E1C2-412D-9AE9-AE5CE183E36B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManager.Application.DTOs", "Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs.csproj", "{7257346E-7ABE-4B8E-871B-38967F6AAC55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManager.Application.DTOs", "Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs.csproj", "{7257346E-7ABE-4B8E-871B-38967F6AAC55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +51,6 @@ Global
 		{4FC10E5C-7481-425E-8713-00B9DC9D1959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FC10E5C-7481-425E-8713-00B9DC9D1959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FC10E5C-7481-425E-8713-00B9DC9D1959}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DBE4DB63-FA0F-4E94-A7A8-2C8B9C1CE13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBE4DB63-FA0F-4E94-A7A8-2C8B9C1CE13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBE4DB63-FA0F-4E94-A7A8-2C8B9C1CE13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBE4DB63-FA0F-4E94-A7A8-2C8B9C1CE13C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{89EFD52F-E1C2-412D-9AE9-AE5CE183E36B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{89EFD52F-E1C2-412D-9AE9-AE5CE183E36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89EFD52F-E1C2-412D-9AE9-AE5CE183E36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,7 +69,6 @@ Global
 		{8CB181D4-AD73-4D1C-A988-A5CB7BDA1E95} = {F5F5881E-0965-438F-BCE8-7A4DA9B861AE}
 		{217A6788-3FEE-41C0-8156-7001702CC001} = {5FD5777C-8A47-490B-BD95-BCFE01B1BC9B}
 		{4FC10E5C-7481-425E-8713-00B9DC9D1959} = {72DC06F8-F2E0-4F35-A6E2-7BC87FE5E727}
-		{DBE4DB63-FA0F-4E94-A7A8-2C8B9C1CE13C} = {F5F5881E-0965-438F-BCE8-7A4DA9B861AE}
 		{89EFD52F-E1C2-412D-9AE9-AE5CE183E36B} = {5FD5777C-8A47-490B-BD95-BCFE01B1BC9B}
 		{7257346E-7ABE-4B8E-871B-38967F6AAC55} = {35DC6F37-76CF-4DC3-BEE6-66E95A8E1A97}
 	EndGlobalSection

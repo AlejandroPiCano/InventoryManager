@@ -1,28 +1,30 @@
-﻿namespace InventoryManager.Domain.Entities
+﻿using InventoryManager.Domain.Entities;
+
+namespace InventoryManager.Domain.Entities
 {
     /// <summary>
-    /// The InventoryItem
+    /// The InventoryItem class
     /// </summary>
-    public interface InventoryItem
+    public class InventoryItem
     {
         /// <summary>
-        /// The Identifier
+        /// The identifier.
         /// </summary>
-        int Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
-        /// The Name
+        /// The Name.
         /// </summary>
-        string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// The Expiration date
+        /// The expiration date.
         /// </summary>
-        DateTime? ExpirationDate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// The Type.
         /// </summary>
-        int Type { get; set; }
+        public int Type { get; set; }
     }
 }

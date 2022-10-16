@@ -10,12 +10,12 @@ namespace InventoryManager.API.Tests
     public class InventoryItemsControllerTests
     {
         private InventoryItemsController controller;
-        private IInventoryListService inventoryListMockService;
+        private IInventoryAppService inventoryListMockService;
 
         [SetUp]
         public void Setup()
         {
-            inventoryListMockService = Mock.Of<IInventoryListService>();
+            inventoryListMockService = Mock.Of<IInventoryAppService>();
             controller = new InventoryItemsController(inventoryListMockService, Mock.Of<ILogger<InventoryItemsController>>());
         }
 

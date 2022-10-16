@@ -1,5 +1,0 @@
-¼
-²C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Infrastructure\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\DefaultInventoryItem.csutf-8ò
-æC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Infrastructure\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\obj\Debug\net6.0\InventoryManager.Infrastructure.Entities.GlobalUsings.g.csutf-8æ
-ÚC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Infrastructure\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8ð
-äC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Infrastructure\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\obj\Debug\net6.0\InventoryManager.Infrastructure.Entities.AssemblyInfo.csutf-8

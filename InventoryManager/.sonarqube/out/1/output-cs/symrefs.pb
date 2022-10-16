@@ -1,23 +1,22 @@
-€
-úC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\BussinessInventoryItem.cs
+´
+êC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\DTO.cs
 
- '
+		 
 
- 
+ –
+ùC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTO.cs
 
- 
+		 !
 
- '
+ 
 
-		 “
-ìC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\InventoryItem.cs
+ '
 
- "
+ ç
+¶C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTOValidator.cs
 
- 
-
- 
-
-  
-
- 
+ *
+  
+  
+  
+  

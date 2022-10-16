@@ -1,28 +1,23 @@
-´
-êC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\DTO.cs
+€
+úC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\BussinessInventoryItem.cs
 
- 
+ '
 
-# 2Œ
-ùC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTO.cs
+ 
 
- !
-		  !!e g
- % )[ _
+ 
 
- '
+ '
 
- 
+ “
+ìC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\InventoryItem.cs
 
-' 6<
-  &     !! $$ ©
-öC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\ResultTypeDTO.cs
+ "
 
- €
-†C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\ValidationResultDTO.cs
+ 
 
- $
-
-
- # 
- " 
+ 
+
+  
+
+ 

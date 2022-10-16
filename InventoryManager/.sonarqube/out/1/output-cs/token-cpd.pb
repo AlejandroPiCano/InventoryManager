@@ -1,109 +1,202 @@
-º
-œC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\BussinessInventoryItem.cs
-	namespace 	
-InventoryManager
+–
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\DTO.cs
+	namespace 	
+InventoryManager
  
-. 
-Domain !
-.! "
-Entities" *
-{ 
-public 
+. 
+Application &
+.& '
+DTOs' +
+{ 
+[ 
+DataContract 
+] 
+public		 
+
+abstract		 
+class		 
+DTO		 
+{
+
+ 
+[ 	
+
+DataMember	 
+] 
+public 
+int 
+Id 
+{ 
+get 
+; 
+set  
+;  !
+}" #
+} 
+} ó
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTO.cs
+	namespace 	
+InventoryManager
+ 
+. 
+Application &
+.& '
+DTOs' +
+{ 
+[ 
+DataContract 
+] 
+public		 
 
-class "
-BussinessInventoryItem '
-:( )
-InventoryItem* 7
-{ 
-public 
-int 
-Id 
-{ 
-get 
-; 
-set  
-;  !
-}" #
-public 
-string 
-Name 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-public 
-DateTime 
-? 
-ExpirationDate '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-public		 
-int		 
-Type		 
-{		 
-get		 
-;		 
-set		 "
-;		" #
-}		$ %
-}
+class		 
+InventoryItemDTO		 !
+:		" #
+DTO		$ '
+{
 
- 
-} ²
-“C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\InventoryItem.cs
-	namespace 	
-InventoryManager
+ 
+[ 	
+
+DataMember	 
+] 
+public 
+string 
+Name 
+{ 
+get  
+;  !
+set" %
+;% &
+}' (
+[ 	
+
+DataMember	 
+] 
+public 
+DateTime 
+? 
+ExpirationDate '
+{( )
+get* -
+;- .
+set/ 2
+;2 3
+}4 5
+[ 	
+
+DataMember	 
+] 
+public 
+int 
+Type 
+{ 
+get 
+; 
+set "
+;" #
+}$ %
+} 
+} Ž
+¦C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTOValidator.cs
+	namespace 	
+InventoryManager
  
-. 
-Domain !
-.! "
-Entities" *
-{ 
-public 
-
-	interface 
-InventoryItem "
-{ 
-int 
-Id 
-{ 
-get 
-; 
-set 
-; 
-} 
-string 
-Name 
-{ 
-get 
-; 
-set 
-; 
-}  !
-DateTime 
-? 
-ExpirationDate  
-{! "
-get# &
-;& '
-set( +
-;+ ,
-}- .
-int 
-Type 
-{ 
-get 
-; 
-set 
-; 
-} 
-}		 
-}
-
- 
+. 
+Application &
+.& '
+DTOs' +
+{ 
+public 
+
+class %
+InventoryItemDTOValidator *
+:+ ,
+AbstractValidator- >
+<> ?
+InventoryItemDTO? O
+>O P
+{		 
+public %
+InventoryItemDTOValidator (
+(( )
+)) *
+{ 	
+RuleFor 
+( 
+x 
+=> 
+x 
+. 
+Id 
+) 
+. 
+NotNull &
+(& '
+)' (
+.( ) 
+GreaterThanOrEqualTo) =
+(= >
+$num> ?
+)? @
+;@ A
+RuleFor 
+( 
+x 
+=> 
+x 
+. 
+Name 
+)  
+.  !
+Length! '
+(' (
+$num( )
+,) *
+$num+ -
+)- .
+.. /
+NotNull/ 6
+(6 7
+)7 8
+;8 9
+RuleFor 
+( 
+x 
+=> 
+x 
+. 
+ExpirationDate )
+)) *
+.* +
+GreaterThan+ 6
+(6 7
+new7 :
+DateTime; C
+(C D
+$numD H
+,H I
+$numJ K
+,K L
+$numM N
+)N O
+)O P
+;P Q
+RuleFor 
+( 
+x 
+=> 
+x 
+. 
+Type 
+)  
+.  !
+InclusiveBetween! 1
+(1 2
+$num2 3
+,3 4
+$num5 7
+)7 8
+;8 9
+} 	
+} 
+} 

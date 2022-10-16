@@ -1,14 +1,12 @@
-ñ
-²C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Infrastructure\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\DefaultInventoryItem.cs
+ò
+³C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Infrastructure\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\InMemoryInventoryItem.cs
 
- %
+ &
 
- 
+ 
 
- 
+ 
 
-		 '
+ '
 
-
-
- 
+ 

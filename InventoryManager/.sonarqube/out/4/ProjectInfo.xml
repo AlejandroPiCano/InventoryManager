@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>InventoryManager.Domain</ProjectName>
+  <ProjectName>InventoryManager.Application</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>5a40849b-431e-460b-9f66-ef3115e77cf1</ProjectGuid>
-  <FullPath>C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain\InventoryManager.Domain.csproj</FullPath>
+  <ProjectGuid>e8f4b529-97a7-4f49-9d54-4ab25dbc614e</ProjectGuid>
+  <FullPath>C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\InventoryManager.Application.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\.sonarqube\conf\4\FilesToAnalyze.txt" />

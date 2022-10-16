@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\InventoryManager.Domain\InventoryManager.Domain.csproj" />
-    <ProjectReference Include="..\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities\InventoryManager.Infrastructure.Entities.csproj" />
   </ItemGroup>
 
 </Project>

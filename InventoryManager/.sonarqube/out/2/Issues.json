@@ -11,30 +11,7 @@
         "language": "en-US"
       },
       "results": [
-        {
-          "ruleId": "AD0001",
-          "level": "warning",
-          "message": "Analyzer 'NUnit.Analyzers.UseAssertMultiple.UseAssertMultipleAnalyzer' threw an exception of type 'System.IndexOutOfRangeException' with message 'Index was outside the bounds of the array.'.\u000d\u000aException occurred with following context:\u000d\u000aCompilation: InventoryManager.API.Tests\u000d\u000aIOperation: Invocation\u000d\u000aSyntaxTree: C:\\Users\\Ale\\Desktop\\MichaelPage\\Backend\\InventoryManager\\API\\InventoryManager.API.Tests\\UnitTest1.cs\u000d\u000aSyntaxNode: Assert.Pass() [InvocationExpressionSyntax]@[210..223) (12,12)-(12,25)\u000d\u000a\u000d\u000aSystem.IndexOutOfRangeException: Index was outside the bounds of the array.\u000d\u000a   at NUnit.Analyzers.UseAssertMultiple.UseAssertMultipleAnalyzer.AnalyzeAssertInvocation(OperationAnalysisContext context, IInvocationOperation assertOperation)\u000d\u000a   at NUnit.Analyzers.BaseAssertionAnalyzer.AnalyzeInvocation(OperationAnalysisContext context)\u000d\u000a   at Microsoft.CodeAnalysis.Diagnostics.AnalyzerExecutor.<>c.<ExecuteOperationAction>b__63_0(ValueTuple`2 data)\u000d\u000a   at Microsoft.CodeAnalysis.Diagnostics.AnalyzerExecutor.ExecuteAndCatchIfThrows_NoLock[TArg](DiagnosticAnalyzer analyzer, Action`1 analyze, TArg argument, Nullable`1 info)\u000d\u000a-----\u000d\u000a\u000d\u000aSuppress the following diagnostics to disable this analyzer: NUnit2045",
-          "properties": {
-            "warningLevel": 1
-          }
-        }
-      ],
-      "rules": {
-        "AD0001": {
-          "id": "AD0001",
-          "shortDescription": "Analyzer Failure",
-          "fullDescription": "Analyzer 'NUnit.Analyzers.UseAssertMultiple.UseAssertMultipleAnalyzer' threw the following exception:\u000d\u000a'Exception occurred with following context:\u000d\u000aCompilation: InventoryManager.API.Tests\u000d\u000aIOperation: Invocation\u000d\u000aSyntaxTree: C:\\Users\\Ale\\Desktop\\MichaelPage\\Backend\\InventoryManager\\API\\InventoryManager.API.Tests\\UnitTest1.cs\u000d\u000aSyntaxNode: Assert.Pass() [InvocationExpressionSyntax]@[210..223) (12,12)-(12,25)\u000d\u000a\u000d\u000aSystem.IndexOutOfRangeException: Index was outside the bounds of the array.\u000d\u000a   at NUnit.Analyzers.UseAssertMultiple.UseAssertMultipleAnalyzer.AnalyzeAssertInvocation(OperationAnalysisContext context, IInvocationOperation assertOperation)\u000d\u000a   at NUnit.Analyzers.BaseAssertionAnalyzer.AnalyzeInvocation(OperationAnalysisContext context)\u000d\u000a   at Microsoft.CodeAnalysis.Diagnostics.AnalyzerExecutor.<>c.<ExecuteOperationAction>b__63_0(ValueTuple`2 data)\u000d\u000a   at Microsoft.CodeAnalysis.Diagnostics.AnalyzerExecutor.ExecuteAndCatchIfThrows_NoLock[TArg](DiagnosticAnalyzer analyzer, Action`1 analyze, TArg argument, Nullable`1 info)\u000d\u000a-----\u000d\u000a'.",
-          "defaultLevel": "warning",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "AnalyzerException"
-            ]
-          }
-        }
-      }
+      ]
     }
   ]
 }

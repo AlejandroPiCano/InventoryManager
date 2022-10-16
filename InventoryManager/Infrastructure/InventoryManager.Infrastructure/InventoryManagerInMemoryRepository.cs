@@ -1,6 +1,5 @@
 ﻿using InventoryManager.Domain.Entities;
 using InventoryManager.Domain.Repository.Contracts;
-using InventoryManager.Infrastructure.Entities;
 
 namespace InventoryManager.Infrastructure
 {
@@ -12,7 +11,7 @@ namespace InventoryManager.Infrastructure
         /// <summary>
         /// The items
         /// </summary>
-        private List<InMemoryInventoryItem> items;
+        private List<InventoryItem> items;
 
         /// <summary>
         /// The InventoryManagerInMemoryRepository constructor
@@ -32,7 +31,7 @@ namespace InventoryManager.Infrastructure
             if (entity is null)
                 throw new ArgumentNullException(nameof(entity));
 
-            this.items.Add(entity as InMemoryInventoryItem);
+            this.items.Add(entity as InventoryItem);
         }
 
         /// <summary>
@@ -46,7 +45,7 @@ namespace InventoryManager.Infrastructure
             if (entity is null)
                 throw new ArgumentNullException(nameof(entity));
 
-            return new Task(() => this.items.Add(entity as InMemoryInventoryItem));
+            return new Task(() => this.items.Add(entity as InventoryItem));
         }
 
         /// <summary>
@@ -107,15 +106,6 @@ namespace InventoryManager.Infrastructure
         }
 
         /// <summary>
-        /// The GetNew method.
-        /// </summary>
-        /// <returns>The InventoryItem</returns>
-        public InventoryItem GetNew()
-        {
-            return new InMemoryInventoryItem();
-        }
-
-        /// <summary>
         /// The Update Method.
         /// </summary>
         /// <param name="id"></param>
@@ -124,7 +114,7 @@ namespace InventoryManager.Infrastructure
         {
             var index = items.IndexOf(items.Find(i => i.Id == id));
 
-            this.items[index] = entity as InMemoryInventoryItem;
+            this.items[index] = entity as InventoryItem;
         }
 
         /// <summary>
@@ -139,7 +129,7 @@ namespace InventoryManager.Infrastructure
             {
                 var index = items.IndexOf(items.Find(i => i.Id == id));
 
-                this.items[index] = entity as InMemoryInventoryItem;
+                this.items[index] = entity as InventoryItem;
             });
         }
 

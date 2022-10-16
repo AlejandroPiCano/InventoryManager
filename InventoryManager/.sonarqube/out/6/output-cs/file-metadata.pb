@@ -1,7 +1,7 @@
-ö
-êC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\IInventoryListService.csutf-8ô
-èC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\InventoryListService.csutf-8Ö
-|C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\InventoryItemConverter.csutf-8Æ
-¢C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\obj\Debug\net6.0\InventoryManager.Application.GlobalUsings.g.csutf-8Æ
-¢C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8¨
-†C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\obj\Debug\net6.0\InventoryManager.Application.AssemblyInfo.csutf-8
+É
+zC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Controllers\InventoryItemsController.csutf-8f
+]C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Program.csutf-8ñ
+äC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\InventoryManager.API.GlobalUsings.g.csutf-8û
+íC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8î
+àC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\InventoryManager.API.AssemblyInfo.csutf-8ß
+õC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\obj\Debug\net6.0\InventoryManager.API.MvcApplicationPartsAssemblyInfo.csutf-8

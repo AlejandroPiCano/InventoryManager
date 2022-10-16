@@ -18,11 +18,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Domain/InventoryManager.Domain.Entities/InventoryManager.Domain.Entities/BussinessInventoryItem.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Application/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs/InventoryItemDTO.cs",
                 "region": {
-                  "startLine": 7,
+                  "startLine": 15,
                   "startColumn": 23,
-                  "endLine": 7,
+                  "endLine": 15,
                   "endColumn": 27
                 }
               }
@@ -31,12 +31,75 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Domain/InventoryManager.Domain.Entities/InventoryManager.Domain.Entities/BussinessInventoryItem.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Application/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs/InventoryItemDTO.cs",
                 "region": {
-                  "startLine": 7,
+                  "startLine": 15,
                   "startColumn": 23,
-                  "endLine": 7,
+                  "endLine": 15,
                   "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'DTO' to match pascal case naming rules, consider using 'Dto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Application/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs/DTO.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 27,
+                  "endLine": 9,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'InventoryItemDTOValidator' to match pascal case naming rules, consider using 'InventoryItemDtoValidator'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Application/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs/InventoryItemDTOValidator.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 18,
+                  "endLine": 8,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'InventoryItemDTO' to match pascal case naming rules, consider using 'InventoryItemDto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/Application/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs/InventoryItemDTO.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 18,
+                  "endLine": 9,
+                  "endColumn": 34
                 }
               }
             }
@@ -58,6 +121,23 @@
             "tags": [
               "Compiler",
               "Telemetry"
+            ]
+          }
+        },
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are using PascalCase. To reduce noise, two consecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on its own is not.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         }

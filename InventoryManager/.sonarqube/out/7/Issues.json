@@ -12,333 +12,21 @@
       },
       "results": [
         {
-          "ruleId": "CS8600",
+          "ruleId": "CS8618",
           "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 25,
-                  "startColumn": 52,
-                  "endLine": 25,
-                  "endColumn": 56
-                }
-              }
-            }
+          "message": "Non-nullable field 'controller' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
           ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8603",
-          "level": "warning",
-          "message": "Possible null reference return.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
                 "region": {
-                  "startLine": 36,
-                  "startColumn": 20,
-                  "endLine": 36,
-                  "endColumn": 26
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 43,
-                  "startColumn": 51,
-                  "endLine": 43,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 26,
-                  "endLine": 54,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 62,
-                  "startColumn": 39,
-                  "endLine": 62,
-                  "endColumn": 43
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8603",
-          "level": "warning",
-          "message": "Possible null reference return.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 73,
-                  "startColumn": 20,
-                  "endLine": 73,
-                  "endColumn": 26
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 80,
-                  "startColumn": 39,
-                  "endLine": 80,
-                  "endColumn": 43
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8603",
-          "level": "warning",
-          "message": "Possible null reference return.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 91,
-                  "startColumn": 20,
-                  "endLine": 91,
-                  "endColumn": 26
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Program.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 18,
-                  "endLine": 10,
-                  "endColumn": 25
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 104,
-                  "startColumn": 40,
-                  "endLine": 104,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 33,
-                  "startColumn": 40,
-                  "endLine": 33,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 70,
-                  "startColumn": 40,
-                  "endLine": 70,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 136,
-                  "startColumn": 40,
-                  "endLine": 136,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 51,
-                  "startColumn": 40,
-                  "endLine": 51,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 151,
-                  "startColumn": 40,
-                  "endLine": 151,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4136",
-          "level": "warning",
-          "message": "All 'Get' method overloads should be adjacent.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
-                "region": {
-                  "startLine": 23,
-                  "startColumn": 46,
-                  "endLine": 23,
-                  "endColumn": 49
+                  "startLine": 12,
+                  "startColumn": 42,
+                  "endLine": 12,
+                  "endColumn": 52
                 }
               }
             }
@@ -346,12 +34,91 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
                 "region": {
-                  "startLine": 60,
-                  "startColumn": 33,
-                  "endLine": 60,
-                  "endColumn": 36
+                  "startLine": 12,
+                  "startColumn": 42,
+                  "endLine": 12,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field 'inventoryListMockService' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 39,
+                  "endLine": 13,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 39,
+                  "endLine": 13,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3415",
+          "level": "warning",
+          "message": "Make sure these 2 arguments are in the correct order: expected value, actual value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 29,
+                  "endLine": 33,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "NUnit2017",
+          "level": "note",
+          "message": "Consider using the constraint model, Assert.That(expr, Is.Null), instead of the classic model, Assert.IsNull(expr)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 105,
+                  "startColumn": 13,
+                  "endLine": 105,
+                  "endColumn": 34
                 }
               }
             }
@@ -359,23 +126,181 @@
           "properties": {
             "warningLevel": 1,
             "customProperties": {
-              "0": "Non-adjacent overload"
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "IsNull"
             }
           }
         },
         {
-          "ruleId": "CA2254",
+          "ruleId": "NUnit2017",
           "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "message": "Consider using the constraint model, Assert.That(expr, Is.Null), instead of the classic model, Assert.IsNull(expr)",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
                 "region": {
-                  "startLine": 88,
-                  "startColumn": 40,
-                  "endLine": 88,
-                  "endColumn": 49
+                  "startLine": 76,
+                  "startColumn": 13,
+                  "endLine": 76,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "IsNull"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2017",
+          "level": "note",
+          "message": "Consider using the constraint model, Assert.That(expr, Is.Null), instead of the classic model, Assert.IsNull(expr)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 13,
+                  "endLine": 47,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "IsNull"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 13,
+                  "endLine": 91,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 62,
+                  "startColumn": 13,
+                  "endLine": 62,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 13,
+                  "endLine": 33,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 121,
+                  "startColumn": 13,
+                  "endLine": 121,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2007",
+          "level": "warning",
+          "message": "The actual value should not be a constant - perhaps the actual value and the expected value have switched places",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 45,
+                  "endLine": 33,
+                  "endColumn": 46
                 }
               }
             }
@@ -385,135 +310,195 @@
           }
         },
         {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
                 "region": {
-                  "startLine": 166,
-                  "startColumn": 40,
-                  "endLine": 166,
-                  "endColumn": 49
+                  "startLine": 157,
+                  "startColumn": 13,
+                  "endLine": 157,
+                  "endColumn": 52
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
           }
         },
         {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API/Controllers/InventoryItemsController.cs",
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
                 "region": {
-                  "startLine": 120,
-                  "startColumn": 40,
-                  "endLine": 120,
-                  "endColumn": 49
+                  "startLine": 183,
+                  "startColumn": 13,
+                  "endLine": 183,
+                  "endColumn": 108
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 225,
+                  "startColumn": 13,
+                  "endLine": 225,
+                  "endColumn": 108
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 13,
+                  "endLine": 141,
+                  "endColumn": 108
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
+          }
+        },
+        {
+          "ruleId": "NUnit2005",
+          "level": "warning",
+          "message": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Ale/Desktop/MichaelPage/Backend/InventoryManager/API/InventoryManager.API.Tests/InventoryItemsControllerTests.cs",
+                "region": {
+                  "startLine": 199,
+                  "startColumn": 13,
+                  "endLine": 199,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HasToleranceValue": "False",
+              "IsGenericMethod": "False",
+              "ModelName": "AreEqual"
+            }
           }
         }
       ],
       "rules": {
-        "CA2254": {
-          "id": "CA2254",
-          "shortDescription": "Template should be a static expression",
-          "fullDescription": "The logging message template should not vary between calls.",
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "NUnit2005": {
+          "id": "NUnit2005",
+          "shortDescription": "Consider using Assert.That(actual, Is.EqualTo(expected)) instead of Assert.AreEqual(expected, actual)",
+          "fullDescription": "Consider using the constraint model, Assert.That(actual, Is.EqualTo(expected)), instead of the classic model, Assert.AreEqual(expected, actual).",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/nunit/nunit.analyzers/tree/master/documentation/NUnit2005.md",
+          "properties": {
+            "category": "Assertion",
+            "isEnabledByDefault": true
+          }
+        },
+        "NUnit2007": {
+          "id": "NUnit2007",
+          "shortDescription": "The actual value should not be a constant",
+          "fullDescription": "The actual value should not be a constant. This indicates that the actual value and the expected value have switched places.",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/nunit/nunit.analyzers/tree/master/documentation/NUnit2007.md",
+          "properties": {
+            "category": "Assertion",
+            "isEnabledByDefault": true
+          }
+        },
+        "NUnit2017": {
+          "id": "NUnit2017",
+          "shortDescription": "Consider using Assert.That(expr, Is.Null) instead of Assert.IsNull(expr)",
+          "fullDescription": "Consider using the constraint model, Assert.That(expr, Is.Null), instead of the classic model, Assert.IsNull(expr).",
           "defaultLevel": "note",
-          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2254",
+          "helpUri": "https://github.com/nunit/nunit.analyzers/tree/master/documentation/NUnit2017.md",
           "properties": {
-            "category": "Usage",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Telemetry",
-              "EnabledRuleInAggressiveMode"
-            ]
+            "category": "Assertion",
+            "isEnabledByDefault": true
           }
         },
-        "CS8600": {
-          "id": "CS8600",
-          "shortDescription": "Converting null literal or possible null value to non-nullable type.",
+        "S3415": {
+          "id": "S3415",
+          "shortDescription": "Assertion arguments should be passed in the correct order",
+          "fullDescription": "The standard assertions library methods such as AreEqual and AreSame in MSTest and NUnit, or Equal and Same in XUnit, expect the first argument to be the expected value and the second argument to be the actual value. Swap them, and your test will still have the same outcome (succeed/fail when it should) but the error messages will be confusing.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8600)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "CS8602": {
-          "id": "CS8602",
-          "shortDescription": "Dereference of a possibly null reference.",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "CS8603": {
-          "id": "CS8603",
-          "shortDescription": "Possible null reference return.",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8603)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "S1118": {
-          "id": "S1118",
-          "shortDescription": "Utility classes should not have public constructors",
-          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3415",
           "properties": {
             "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S4136": {
-          "id": "S4136",
-          "shortDescription": "Method overloads should be grouped together",
-          "fullDescription": "For clarity, all overloads of the same method should be grouped together. That lets both users and maintainers quickly understand all the current available options.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4136",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
               "TestSourceScope",
               "SonarWay"
             ]

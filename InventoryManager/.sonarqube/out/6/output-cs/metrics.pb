@@ -1,9 +1,8 @@
-‡
-êC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\IInventoryListService.csj4	
- !"#&'()*-./034569:;<=@ABCFGHIJMNOPr$+17>DKQRS 
-èC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\Application.Services\InventoryListService.cs  8j -./089:;ABCDEMNOPQri	
-!"#%&'(*+12356<=>?FGHJKRSTVWXY[\^_`bcefgijklnoqrsuvwxz{}~ÅÇÑÖÜàâãåçèêíìxÇ%#%'*35>HJTVX[`bgiknsuwzÅÜàçè≈
-|C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application\InventoryItemConverter.cs
- 8j
-	
-r !"#%&'(*+,-xÇ"#%&'(*
+á
+zC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Controllers\InventoryItemsController.cs4 
+8
+jY	
+$%&'(9:;<=OPQRSTfghijz{|}~íìîïñó≠ÆØ∞±≤≈∆«»… ›ﬁﬂ‡·‚rË !")*+,./01234578>?@ACDEFGHIJLMUVWXZ[\]^_`acdklmnopqrstvwxÄÅÇÉÑÖÜáàâãåéèêòôöõúùûü†°£§•¶®©™´≥¥µ∂∑∏π∫ªºæø¡¬√ÀÃÕŒœ–—“”‘÷◊Ÿ⁄€„‰ÂÊÁËÈÍÎÏÓÔÒÚÛÙıx	Ç8 !047EIL\`cptvÖâåéù°£¶®∏ºø¡–‘◊ŸËÏÔÒ™
+]C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\API\InventoryManager.API\Program.cs 8j
+!'r!	
+"#%()*+,.13456xÇ"#%(*+.13

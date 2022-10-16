@@ -74,11 +74,5 @@
         /// </summary>
         /// <param name="id"></param>
         Task DeleteAsync(int id);
-
-        /// <summary>
-        /// Get New
-        /// </summary>
-        /// <returns></returns>
-        T GetNew();
     }
 }

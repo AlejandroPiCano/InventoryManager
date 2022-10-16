@@ -1,7 +1,15 @@
-Ã
-œC:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\BussinessInventoryItem.cs
- 	 
-  '* 7         " %  * -/ 2		 		 		 		 "ô
-“C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Domain\InventoryManager.Domain.Entities\InventoryManager.Domain.Entities\InventoryItem.cs
- 	 
-  "       # &( +   
+‹
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\DTO.cs
+ 
+ 	    		 
+		 		 		    	      ø
+C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTO.cs
+ 
+ 	    		 
+		 		 !		$ '   	     " %   	   * -/ 2   	     "ƒ
+¦C:\Users\Ale\Desktop\MichaelPage\Backend\InventoryManager\Application\InventoryManager.Application.DTOs\InventoryManager.Application.DTOs\InventoryItemDTOValidator.cs
+ 
+ 	  '  
+  *- >? O
+
+  -   (> ?( )+ -7 :; CD HJ KM N2 35 7
