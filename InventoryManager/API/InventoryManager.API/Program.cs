@@ -9,6 +9,8 @@ using InventoryManager.Domain.Repository.Contracts;
 using InventoryManager.Infrastructure;
 using Microsoft.AspNetCore.Authentication;
 using MediatR;
+using MassTransit;
+using InventoryManager.Domain.Events;
 
 namespace InventoryManager
 {
@@ -28,6 +30,7 @@ namespace InventoryManager
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddScoped<ICustomEventManager, CustomEventManager>();
             builder.Services.AddScoped<IInventoryAppService, InventoryCQRSAppService>();
             builder.Services.AddScoped<IInventoryDomainService, InventoryDomainService>();
             builder.Services.AddSingleton<IRepository<InventoryItem>, InventoryManagerInMemoryRepository>();
@@ -42,6 +45,23 @@ namespace InventoryManager
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            #region MassTransit
+            builder.Services.AddMassTransit(x =>
+            {
+                x.UsingRabbitMq((context, cfg) =>
+                {
+                    cfg.Host(builder.Configuration["ServicesBus:Server"], "/", h =>
+                    {
+                        h.Username(builder.Configuration["ServicesBus:UserName"]);
+                        h.Password(builder.Configuration["ServicesBus:Password"]);
+                    });
+
+                    cfg.ConfigureEndpoints(context);
+                });
+            });
+
+            builder.Services.AddMassTransitHostedService(true);
+            #endregion
 
             // Basic authentication
             builder.Services.AddAuthentication("BasicAuthentication")

@@ -21,13 +21,13 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the get method returning ok response")]
-        public void InventoryListController_Get_ReturnOk()
+        public async Task InventoryListController_Get_ReturnOk()
         {
             //Arrange
-            Mock.Get(inventoryListMockService).Setup(x => x.GetAllInventoryItems()).Returns(new List<InventoryItemDTO>() { new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now } });
+            Mock.Get(inventoryListMockService).Setup(x => x.GetAllInventoryItemsAsync()).Returns(Task.Run(() => new List<InventoryItemDTO>() { new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now } }));
 
             //Act
-            var result = controller.Get();
+            var result = await controller.Get();
 
             //Assert
             Assert.AreEqual(result.Count(), 1);
@@ -35,13 +35,13 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the get method throwing an axception and null response")]
-        public void InventoryListController_Get_ThrowingException()
+        public async Task InventoryListController_Get_ThrowingException()
         {
             //Arrange
-            Mock.Get(inventoryListMockService).Setup(x => x.GetAllInventoryItems()).Throws(new System.Exception());
+            Mock.Get(inventoryListMockService).Setup(x => x.GetAllInventoryItemsAsync()).Throws(new System.Exception());
 
             //Act
-            var result = controller.Get();
+            var result = await controller.Get();
 
             //Assert
             Assert.IsNull(result);
@@ -49,14 +49,14 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the get/id method returning ok response")]
-        public void InventoryListController_GetId_ReturnOk()
+        public async Task InventoryListController_GetId_ReturnOk()
         {
             //Arrange
             var inventoryItem = new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now };
-            Mock.Get(inventoryListMockService).Setup(x => x.GetInventoryItem(1)).Returns(inventoryItem);
+            Mock.Get(inventoryListMockService).Setup(x => x.GetInventoryItemAsync(1)).Returns(Task.Run(() => inventoryItem));
 
             //Act
-            var result = controller.Get(1);
+            var result = await controller.Get(1);
 
             //Assert
             Assert.AreEqual(result, inventoryItem);
@@ -64,13 +64,13 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the get/id method throwing an axception and null response")]
-        public void InventoryListController_GetId_ThrowingException()
+        public async Task InventoryListController_GetId_ThrowingException()
         {
             //Arrange
-            Mock.Get(inventoryListMockService).Setup(x => x.GetInventoryItem(1)).Throws(new System.Exception());
+            Mock.Get(inventoryListMockService).Setup(x => x.GetInventoryItemAsync(1)).Throws(new System.Exception());
 
             //Act
-            var result = controller.Get(1);
+            var result = await controller.Get(1);
 
             //Assert
             Assert.IsNull(result);
@@ -107,15 +107,16 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the Post method returning ok response")]
-        public void InventoryListController_Post_ReturnOk()
+        public async Task InventoryListController_Post_ReturnOk()
         {
             //Arrange
             var inventoryItem = new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now };
             var expectedResult = new ValidationResult();
-            Mock.Get(inventoryListMockService).Setup(x => x.Create(inventoryItem)).Returns(expectedResult);
+
+            Mock.Get(inventoryListMockService).Setup(x => x.CreateAsync(inventoryItem)).Returns(Task.Run(() => expectedResult));
 
             //Act
-            var result = controller.Post(inventoryItem);
+            var result = await controller.Post(inventoryItem);
 
             //Assert
             Assert.AreEqual(result, expectedResult);
@@ -123,7 +124,7 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the Post method throwing an axception and null response")]
-        public void InventoryListController_Post_ThrowingException()
+        public async Task InventoryListController_Post_ThrowingException()
         {
             //Arrange
             var inventoryItem = new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now };
@@ -132,10 +133,10 @@ namespace InventoryManager.API.Tests
             ValidationResult expectedResult = new ValidationResult();           
             expectedResult.Errors.Add(new ValidationFailure(string.Empty, errorDescription));
 
-            Mock.Get(inventoryListMockService).Setup(x => x.Create(inventoryItem)).Throws(new System.Exception(errorDescription));
+            Mock.Get(inventoryListMockService).Setup(x => x.CreateAsync(inventoryItem)).Throws(new System.Exception(errorDescription));
 
             //Act
-            var result = controller.Post(inventoryItem);
+            var result = await controller.Post(inventoryItem);
 
             //Assert
             Assert.AreEqual(result.Errors.First().ErrorMessage, expectedResult.Errors.First().ErrorMessage);
@@ -143,15 +144,15 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the Put method returning ok response")]
-        public void InventoryListController_Put_ReturnOk()
+        public async Task InventoryListController_Put_ReturnOk()
         {
             //Arrange
             var inventoryItem = new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now };
             var expectedResult = new ValidationResult();
-            Mock.Get(inventoryListMockService).Setup(x => x.Update(1, inventoryItem)).Returns(expectedResult);
+            Mock.Get(inventoryListMockService).Setup(x => x.UpdateAsync(1, inventoryItem)).Returns(Task.Run(() => expectedResult));
 
             //Act
-            var result = controller.Put(1, inventoryItem);
+            var result = await controller.Put(1, inventoryItem);
 
             //Assert
             Assert.AreEqual(result, expectedResult);
@@ -159,7 +160,7 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the Put method throwing an axception and null response")]
-        public void InventoryListController_Put_ThrowingException()
+        public async Task InventoryListController_Put_ThrowingException()
         {
             //Arrange
             var inventoryItem = new InventoryItemDTO()
@@ -174,10 +175,10 @@ namespace InventoryManager.API.Tests
             ValidationResult expectedResult = new ValidationResult();
             expectedResult.Errors.Add(new ValidationFailure(string.Empty, errorDescription));
 
-            Mock.Get(inventoryListMockService).Setup(x => x.Update(1, inventoryItem)).Throws(new System.Exception(errorDescription));
+            Mock.Get(inventoryListMockService).Setup(x => x.UpdateAsync(1, inventoryItem)).Throws(new System.Exception(errorDescription));
 
             //Act
-            var result = controller.Put(1, inventoryItem);
+            var result = await controller.Put(1, inventoryItem);
 
             //Assert
             Assert.AreEqual(result.Errors.First().ErrorMessage, expectedResult.Errors.First().ErrorMessage);
@@ -185,15 +186,15 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the Delete method returning ok response")]
-        public void InventoryListController_Delete_ReturnOk()
+        public async Task InventoryListController_Delete_ReturnOk()
         {
             //Arrange
             var inventoryItem = new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now };
             var expectedResult = new ValidationResult();
-            Mock.Get(inventoryListMockService).Setup(x => x.Delete(1)).Returns(expectedResult);
+            Mock.Get(inventoryListMockService).Setup(x => x.DeleteAsync(1)).Returns(Task.Run(() => expectedResult));
 
             //Act
-            var result = controller.Delete(1);
+            var result = await controller.Delete(1);
 
             //Assert
             Assert.AreEqual(result, expectedResult);
@@ -201,7 +202,7 @@ namespace InventoryManager.API.Tests
 
         [Test]
         [Description("This is a test for the Delete method throwing an axception and null response")]
-        public void InventoryListController_Delete_ThrowingException()
+        public async Task InventoryListController_Delete_ThrowingException()
         {
             //Arrange
             var inventoryItem = new InventoryItemDTO()
@@ -216,10 +217,52 @@ namespace InventoryManager.API.Tests
             ValidationResult expectedResult = new ValidationResult();
             expectedResult.Errors.Add(new ValidationFailure(string.Empty, errorDescription));
 
-            Mock.Get(inventoryListMockService).Setup(x => x.Delete(1)).Throws(new System.Exception(errorDescription));
+            Mock.Get(inventoryListMockService).Setup(x => x.DeleteAsync(1)).Throws(new System.Exception(errorDescription));
 
             //Act
-            var result = controller.Delete(1);
+            var result = await controller.Delete(1);
+
+            //Assert
+            Assert.AreEqual(result.Errors.First().ErrorMessage, expectedResult.Errors.First().ErrorMessage);
+        }
+
+        [Test]
+        [Description("This is a test for the Delete method returning ok response")]
+        public async Task InventoryListController_DeleteByName_ReturnOk()
+        {
+            //Arrange
+            var inventoryItem = new InventoryItemDTO() { Id = 1, Name = "Desc", ExpirationDate = DateTime.Now };
+            var expectedResult = new ValidationResult();
+            Mock.Get(inventoryListMockService).Setup(x => x.DeleteByNameAsync("Desc")).Returns(Task.Run(() => expectedResult));
+
+            //Act
+            var result = await controller.DeleteByName("Desc");
+
+            //Assert
+            Assert.AreEqual(result, expectedResult);
+        }
+
+        [Test]
+        [Description("This is a test for the Delete method throwing an axception and null response")]
+        public async Task InventoryListController_DeleteByName_ThrowingException()
+        {
+            //Arrange
+            var inventoryItem = new InventoryItemDTO()
+            {
+                Id = 1,
+                Name = "Desc",
+                ExpirationDate = DateTime.Now
+            };
+
+            string errorDescription = "Error Description";
+
+            ValidationResult expectedResult = new ValidationResult();
+            expectedResult.Errors.Add(new ValidationFailure(string.Empty, errorDescription));
+
+            Mock.Get(inventoryListMockService).Setup(x => x.DeleteByNameAsync("Desc")).Throws(new System.Exception(errorDescription));
+
+            //Act
+            var result = await controller.DeleteByName("Desc");
 
             //Assert
             Assert.AreEqual(result.Errors.First().ErrorMessage, expectedResult.Errors.First().ErrorMessage);

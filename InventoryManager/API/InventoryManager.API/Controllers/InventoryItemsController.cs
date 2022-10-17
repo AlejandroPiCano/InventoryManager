@@ -43,18 +43,18 @@ namespace InventoryManager.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<InventoryItemDTO>> Get()
         {
-            Task<List<InventoryItemDTO>>? result = null;
+            List<InventoryItemDTO> result = null;
 
             try
             {
-                result = _service.GetAllInventoryItemsAsync();
+                return await _service.GetAllInventoryItemsAsync();
             }
             catch (System.Exception e)
             {
                 _logger.LogInformation(e.Message);
             }
 
-            return await result;
+            return result;
         }
 
         // GET api/<InventoryListController>/5
@@ -117,7 +117,7 @@ namespace InventoryManager.API.Controllers
             {
                 _logger.LogInformation(e.Message);
 
-                return await new Task<ValidationResult>(() =>
+                return await Task.Run(() =>
                 {
                     var result = new ValidationResult();
                     result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
@@ -144,7 +144,7 @@ namespace InventoryManager.API.Controllers
             {
                 _logger.LogInformation(e.Message);
 
-                return await new Task<ValidationResult>(() =>
+                return await Task.Run(() =>
                 {
                     var result = new ValidationResult();
                     result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
@@ -171,7 +171,7 @@ namespace InventoryManager.API.Controllers
             {
                 _logger.LogInformation(e.Message);
 
-                return await new Task<ValidationResult>(() =>
+                return await Task.Run(() =>
                 {
                     var result = new ValidationResult();
                     result.Errors.Add(new ValidationFailure(String.Empty, e.Message));
@@ -198,7 +198,7 @@ namespace InventoryManager.API.Controllers
             {
                 _logger.LogInformation(e.Message);
 
-                return await new Task<ValidationResult>(() =>
+                return await Task.Run(() =>
                 {
                     var result = new ValidationResult();
                     result.Errors.Add(new ValidationFailure(String.Empty, e.Message));

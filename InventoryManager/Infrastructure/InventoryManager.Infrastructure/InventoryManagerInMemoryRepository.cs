@@ -152,7 +152,10 @@ namespace InventoryManager.Infrastructure
             {
                 var index = items.IndexOf(items.Find(i => i.Id == id));
 
-                this.items[index] = entity as InventoryItem;
+                if (index >= 0)
+                {
+                    this.items[index] = entity as InventoryItem;
+                }
             });
         }
         #endregion

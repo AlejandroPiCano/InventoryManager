@@ -4,11 +4,14 @@ using FluentValidation.Results;
 using InventoryManager.Application.DTOs;
 using InventoryManager.Domain.Commands;
 using InventoryManager.Domain.Entities;
+using InventoryManager.Domain.Events;
 using InventoryManager.Domain.Queries;
 using InventoryManager.Domain.Repository.Contracts;
 using InventoryManager.Domain.Services;
+using MassTransit;
 using MediatR;
 using System.Collections.Generic;
+using ValidationResult = FluentValidation.Results.ValidationResult;
 
 namespace InventoryManager.Application.Services
 {
@@ -22,6 +25,7 @@ namespace InventoryManager.Application.Services
         readonly IValidator<InventoryItemDTO> validator;
         readonly IMapper mapper;
         readonly IMediator mediator;
+        readonly ICustomEventManager customEventManager;
 
         /// <summary>
         /// The InventoryListService constructor.
@@ -29,13 +33,14 @@ namespace InventoryManager.Application.Services
         /// <param name="inventoryListDomainService"></param>
         /// <param name="inventoryListRepository"></param>
         /// <param name="validator"></param>
-        public InventoryCQRSAppService(IInventoryDomainService inventoryListDomainService, IRepository<InventoryItem> inventoryListRepository, IValidator<InventoryItemDTO> validator, IMapper mapper, IMediator mediator)
+        public InventoryCQRSAppService(IInventoryDomainService inventoryListDomainService, IRepository<InventoryItem> inventoryListRepository, IValidator<InventoryItemDTO> validator, IMapper mapper, IMediator mediator, ICustomEventManager customEventManager)
         {
             this.inventoryListDomainService = inventoryListDomainService;
             this.inventoryListRepository = inventoryListRepository;
             this.validator = validator;
             this.mapper = mapper;
             this.mediator = mediator;
+            this.customEventManager = customEventManager;
         }
 
         #region Interface Implementation
@@ -79,6 +84,8 @@ namespace InventoryManager.Application.Services
             if (result.IsValid)
             {
                 await mediator.Send(mapper.Map<CreateInventoryCommand>(inventoryItemDTO));
+
+                customEventManager.SendItemExpiredEvent(inventoryItemDTO.Name, inventoryItemDTO.ExpirationDate);
             }
 
             return result;
@@ -92,6 +99,8 @@ namespace InventoryManager.Application.Services
             if (result.IsValid)
             {
                 await mediator.Send(mapper.Map<UpdateInventoryCommand>(inventoryItemDTO));
+
+                customEventManager.SendItemExpiredEvent(inventoryItemDTO.Name, inventoryItemDTO.ExpirationDate);
             }
 
             return result;
@@ -99,16 +108,22 @@ namespace InventoryManager.Application.Services
 
         public async Task<ValidationResult> DeleteAsync(int id)
         {
-            await mediator.Send(new DeleteByIdInventoryCommand() { Id = id});
+            await mediator.Send(new DeleteByIdInventoryCommand() { Id = id });            
 
             return new ValidationResult();
         }
 
-
+        /// <summary>
+        /// The DeleteByNameAsync name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public async Task<ValidationResult> DeleteByNameAsync(string name)
         {
-            await mediator.Send(new DeleteByNameInventoryCommand() { Name = name }) ;
+            await mediator.Send(new DeleteByNameInventoryCommand() { Name = name });
 
+            customEventManager.SendItemRemovedEvent(name);
+            
             return new ValidationResult();
         }
 

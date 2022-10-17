@@ -19,7 +19,7 @@ namespace InventoryManager.Domain.Commands
         /// <summary>
         ///UpdateInventoryCommandHandlers class.
         /// </summary>
-        public class UpdateInventoryCommandHandler : IRequestHandler<CreateInventoryCommand, int>
+        public class UpdateInventoryCommandHandler : IRequestHandler<UpdateInventoryCommand, int>
         {
             IRepository<InventoryItem> repository;
             IMapper mapper;
@@ -40,7 +40,7 @@ namespace InventoryManager.Domain.Commands
             /// <param name="request"></param>
             /// <param name="cancellationToken"></param>
             /// <returns></returns>
-            public async Task<int> Handle(CreateInventoryCommand request, CancellationToken cancellationToken)
+            public async Task<int> Handle(UpdateInventoryCommand request, CancellationToken cancellationToken)
             {
                 await repository.UpdateAsync(request.Id, mapper.Map<InventoryItem>(request));
 

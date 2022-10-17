@@ -41,6 +41,42 @@
 			"response": []
 		},
 		{
+			"name": "http://localhost:61408/api/InventoryItems/{id}",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:61408/api/InventoryItems/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61408",
+					"path": [
+						"api",
+						"InventoryItems",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:61408/api/InventoryItems",
 			"request": {
 				"auth": {
@@ -85,7 +121,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:61408/api/InventoryItems/1",
+			"name": "http://localhost:61408/api/InventoryItems/{id}",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -114,7 +150,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:61408/api/InventoryItems/1",
+					"raw": "http://localhost:61408/api/InventoryItems/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -123,14 +159,14 @@
 					"path": [
 						"api",
 						"InventoryItems",
-						"1"
+						"3"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:61408/api/InventoryItems/DeleteByName/A2",
+			"name": "http://localhost:61408/api/InventoryItems/DeleteByName/{name}",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -159,7 +195,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:61408/api/InventoryItems/DeleteByName/A2",
+					"raw": "http://localhost:61408/api/InventoryItems/DeleteByName/A3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -169,7 +205,7 @@
 						"api",
 						"InventoryItems",
 						"DeleteByName",
-						"A2"
+						"A3"
 					]
 				}
 			},
@@ -215,6 +251,42 @@
 						"api",
 						"InventoryItems",
 						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:61408/api/InventoryItems/BussinessInventoryItemExample",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:61408/api/InventoryItems/BussinessInventoryItemExample",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61408",
+					"path": [
+						"api",
+						"InventoryItems",
+						"BussinessInventoryItemExample"
 					]
 				}
 			},
