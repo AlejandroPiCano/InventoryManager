@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 namespace InventoryManager.API.Security
 {
     /// <summary>
-    /// The APIBasicAuthenticationHandler class.
+    /// The APIBasicAuthenticationHandler class for basic security.
     /// </summary>
     public class APIBasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {

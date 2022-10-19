@@ -45,6 +45,15 @@ namespace InventoryManager
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(options => options.AddPolicy("EnableCORS", builder =>
+            {
+                builder.AllowAnyMethod()
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+
+            }));
+
             #region MassTransit
             builder.Services.AddMassTransit(x =>
             {
@@ -70,6 +79,7 @@ namespace InventoryManager
             builder.Services.AddAuthorization();
 
             var app = builder.Build();
+            app.UseCors("EnableCORS");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -78,6 +88,7 @@ namespace InventoryManager
                 app.UseSwaggerUI();
             }
 
+            app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
 
