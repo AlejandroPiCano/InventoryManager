@@ -1,2 +1,0 @@
-﻿Note:
-In ConfigureServices Method in Startup.cs we can change the IInventoryAppService Injection from InventoryCQRSAppService to InventoryAppService for use instead of CQRS pattern a typical Repository pattern
