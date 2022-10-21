@@ -15,7 +15,12 @@ namespace InventoryManager.Domain.Commands
     /// UpdateInventoryCommand class.
     /// </summary>
     public class UpdateInventoryCommand : InventoryItemCommand, IRequest<int>
-    { 
+    {
+        /// <summary>
+        /// The Resquest inventory item Id
+        /// </summary>
+        public int RequestInventoryItemId { get; set; }
+
         /// <summary>
         ///UpdateInventoryCommandHandlers class.
         /// </summary>
@@ -42,7 +47,7 @@ namespace InventoryManager.Domain.Commands
             /// <returns></returns>
             public async Task<int> Handle(UpdateInventoryCommand request, CancellationToken cancellationToken)
             {
-                await repository.UpdateAsync(request.Id, mapper.Map<InventoryItem>(request));
+                await repository.UpdateAsync(request.RequestInventoryItemId, mapper.Map<InventoryItem>(request));
 
                 return request.Id;  
             }

@@ -33,7 +33,7 @@ namespace InventoryManager.Infrastructure
             if (entity is null)
                 throw new ArgumentNullException(nameof(entity));
 
-            this.items.Add(entity as InventoryItem);
+            this.items.Add(entity );
         }
         /// <summary>
         /// The Get method.
@@ -60,7 +60,7 @@ namespace InventoryManager.Infrastructure
         /// <returns>The List of InventoryItem</returns>
         public List<InventoryItem> GetAll()
         {
-            return this.items.Select(t => t as InventoryItem).ToList();
+            return this.items.Select(t => t).ToList();
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace InventoryManager.Infrastructure
         {
             var index = items.IndexOf(items.Find(i => i.Id == id));
 
-            this.items[index] = entity as InventoryItem;
+            this.items[index] = entity;
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace InventoryManager.Infrastructure
             if (entity is null)
                 throw new ArgumentNullException(nameof(entity));
 
-            return Task.Run(() => this.items.Add(entity as InventoryItem));
+            return Task.Run(() => this.items.Add(entity));
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace InventoryManager.Infrastructure
         /// <returns>The Task<List<InventoryItem>></returns>
         public Task<List<InventoryItem>> GetAllAsync()
         {
-            return Task.Run(() => this.items.Select(t => t as InventoryItem).ToList());
+            return Task.Run(() => this.items.Select(t => t).ToList());
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace InventoryManager.Infrastructure
 
                 if (index >= 0)
                 {
-                    this.items[index] = entity as InventoryItem;
+                    this.items[index] = entity;
                 }
             });
         }

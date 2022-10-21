@@ -30,6 +30,11 @@ namespace InventoryManager
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            //Use this FakeEventManager and comment the MassTransit's region for desactivate RabbitMq in order to use Docker without Rabbitmq.
+            //builder.Services.AddScoped<ICustomEventManager, FakeEventManager>();
+
+            //Use this CustomEventManager and uncomment the MassTransit's region for activate RabbitMq in order to use Docker without Rabbitmq.
             builder.Services.AddScoped<ICustomEventManager, CustomEventManager>();
             builder.Services.AddScoped<IInventoryAppService, InventoryCQRSAppService>();
             builder.Services.AddScoped<IInventoryDomainService, InventoryDomainService>();
@@ -54,6 +59,7 @@ namespace InventoryManager
 
             }));
 
+            //// Comment this region for desactivate RabbitMq
             #region MassTransit
             builder.Services.AddMassTransit(x =>
             {

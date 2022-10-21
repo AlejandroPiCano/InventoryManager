@@ -1,8 +1,5 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
-#For more information, please see https://aka.ms/containercompat
-
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -13,6 +10,7 @@ COPY ["API/InventoryManager.API/InventoryManager.API.csproj", "API/InventoryMana
 COPY ["Application/InventoryManager.Application/InventoryManager.Application.csproj", "Application/InventoryManager.Application/"]
 COPY ["Domain/InventoryManager.Domain/InventoryManager.Domain.csproj", "Domain/InventoryManager.Domain/"]
 COPY ["Domain/InventoryManager.Domain.Entities/InventoryManager.Domain.Entities/InventoryManager.Domain.Entities.csproj", "Domain/InventoryManager.Domain.Entities/InventoryManager.Domain.Entities/"]
+COPY ["Domain/InventoryManager.Domain.Events/InventoryManager.Domain.Events.csproj", "Domain/InventoryManager.Domain.Events/"]
 COPY ["Application/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs.csproj", "Application/InventoryManager.Application.DTOs/InventoryManager.Application.DTOs/"]
 COPY ["Infrastructure/InventoryManager.Infrastructure/InventoryManager.Infrastructure.csproj", "Infrastructure/InventoryManager.Infrastructure/"]
 RUN dotnet restore "API/InventoryManager.API/InventoryManager.API.csproj"

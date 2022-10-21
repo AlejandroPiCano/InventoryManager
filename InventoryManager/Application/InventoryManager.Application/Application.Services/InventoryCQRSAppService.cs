@@ -98,7 +98,10 @@ namespace InventoryManager.Application.Services
 
             if (result.IsValid)
             {
-                await mediator.Send(mapper.Map<UpdateInventoryCommand>(inventoryItemDTO));
+                var command = mapper.Map<UpdateInventoryCommand>(inventoryItemDTO);
+                command.RequestInventoryItemId = id;
+
+                await mediator.Send(command);
 
                 customEventManager.SendItemExpiredEvent(inventoryItemDTO.Name, inventoryItemDTO.ExpirationDate);
             }
