@@ -7,6 +7,9 @@ using Moq;
 
 namespace InventoryManager.API.Tests
 {
+    /// <summary>
+    /// The InventoryItemsControllerTests class.
+    /// </summary>
     public class InventoryItemsControllerTests
     {
         private InventoryItemsController controller;
