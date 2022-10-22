@@ -79,7 +79,7 @@ namespace InventoryManager
                     }
                     else
                     {
-                        cfg.Host(new Uri("http://rabbitmq:15672/"), h =>
+                        cfg.Host("localhost", "/", h =>
                         {
                             h.Username(builder.Configuration["ServicesBus:UserName"]);
                             h.Password(builder.Configuration["ServicesBus:Password"]);
