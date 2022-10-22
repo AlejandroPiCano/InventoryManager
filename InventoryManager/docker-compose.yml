@@ -9,33 +9,10 @@ services:
     ports:
       - "61408:80"
       - "5281:5280"
-  rabbitmq-container:
-    image: rabbitmq:3-management-alpine
-    hostname: rabbitmq-container
-    environment:
-            - RABBITMQ_DEFAULT_USER=guest
-            - RABBITMQ_DEFAULT_PASS=guest
+  rabbitmq:
+    image: masstransit/rabbitmq:latest
     ports:
       - "5672:5672"
       - "15672:15672"
-  #resolute-container:
-  #  image: phanibushan/resolute-hub
-  #  ports:
-  #    - 8080:8080
-  #  environment:
-  #    - spring_rabbitmq_host=rabbitmq-container
-  #    - spring_rabbitmq_port=5672
-  #    - spring_rabbitmq_username=guest
-  #    - spring_rabbitmq_password=guest
-  #    - resolute_rabbitmq_publishQueueName=resolute-run-request
-  #    - resolute_rabbitmq_exchange=resolute
-  #  depends_on:
-  #    - rabbitmq-container
-  #  volumes:
-  #    - /var/run/docker.sock:/var/run/docker.sock
-  #  networks:
-  #    - resolute
+      - "15692:15692"  
 
-networks:
-  resolute:
-      name: resolute

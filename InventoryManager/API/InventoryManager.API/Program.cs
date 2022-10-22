@@ -19,6 +19,11 @@ namespace InventoryManager
     /// </summary>
     public class Program
     {
+        static bool? _isRunningInContainer;
+
+        static bool IsRunningInContainer =>
+    _isRunningInContainer ??= bool.TryParse(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER"), out var inContainer) && inContainer;
+
         /// <summary>
         /// The Main method
         /// </summary>
@@ -61,15 +66,25 @@ namespace InventoryManager
 
             //// Comment this region for desactivate RabbitMq
             #region MassTransit
+          
             builder.Services.AddMassTransit(x =>
             {
+               
                 x.UsingRabbitMq((context, cfg) =>
                 {
-                    cfg.Host(builder.Configuration["ServicesBus:Server"], "/", h =>
+                    if (IsRunningInContainer)
                     {
-                        h.Username(builder.Configuration["ServicesBus:UserName"]);
-                        h.Password(builder.Configuration["ServicesBus:Password"]);
-                    });
+                        cfg.AutoStart = true;
+                        cfg.Host("rabbitmq");
+                    }
+                    else
+                    {
+                        cfg.Host(new Uri("http://rabbitmq:15672/"), h =>
+                        {
+                            h.Username(builder.Configuration["ServicesBus:UserName"]);
+                            h.Password(builder.Configuration["ServicesBus:Password"]);
+                        });
+                    }
 
                     cfg.ConfigureEndpoints(context);
                 });
