@@ -6,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: API/InventoryManager.API/Dockerfile
+    depends_on:
+      - rabbitmq
     ports:
       - "61408:80"
       - "5281:5280"
