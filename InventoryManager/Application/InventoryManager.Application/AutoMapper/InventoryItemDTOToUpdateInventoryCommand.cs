@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using InventoryManager.Application.DTOs;
-using InventoryManager.Domain.Commands;
+using InventoryManager.Application.Commands;
 
 namespace InventoryManager.Application.AutoMapper
 {

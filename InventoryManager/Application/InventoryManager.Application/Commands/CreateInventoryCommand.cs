@@ -9,22 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManager.Domain.Commands
+namespace InventoryManager.Application.Commands
 {
     /// <summary>
-    /// DeleteInventoryCommand class.
+    /// CreateInventoryCommand class.
     /// </summary>
-    public class DeleteByNameInventoryCommand : IRequest<string>
+    public class CreateInventoryCommand : InventoryItemCommand, IRequest<int>
     {
         /// <summary>
-        /// The Name
+        /// CreateInventoryCommandHandlers class.
         /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// DeleteByNameInventoryCommandHandler class.
-        /// </summary>
-        public class DeleteByNameInventoryCommandHandler : IRequestHandler<DeleteByNameInventoryCommand, string>
+        public class CreateInventoryCommandHandler : IRequestHandler<CreateInventoryCommand, int>
         {
             IRepository<InventoryItem> repository;
             IMapper mapper;
@@ -33,7 +28,7 @@ namespace InventoryManager.Domain.Commands
             /// GetInventoryItemsHandler method.
             /// </summary>
             /// <param name="repository"></param>
-            public DeleteByNameInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
+            public CreateInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
             {
                 this.repository = repository;
                 this.mapper = mapper;
@@ -45,11 +40,11 @@ namespace InventoryManager.Domain.Commands
             /// <param name="request"></param>
             /// <param name="cancellationToken"></param>
             /// <returns></returns>
-            public async Task<string> Handle(DeleteByNameInventoryCommand request, CancellationToken cancellationToken)
+            public async Task<int> Handle(CreateInventoryCommand request, CancellationToken cancellationToken)
             {
-                await repository.DeleteByNameAsync(request.Name);
+                await repository.CreateAsync(mapper.Map<InventoryItem>(request));
 
-                return request.Name;  
+                return request.Id;  
             }
         }
     }

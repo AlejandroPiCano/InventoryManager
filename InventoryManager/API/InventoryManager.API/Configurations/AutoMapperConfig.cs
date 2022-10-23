@@ -1,5 +1,4 @@
 ﻿using InventoryManager.Application.AutoMapper;
-using InventoryManager.Domain.AutoMapper;
 
 namespace InventoryManager.API.Configurations
 {

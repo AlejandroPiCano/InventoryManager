@@ -16,10 +16,4 @@
     <ProjectReference Include="..\InventoryManager.Domain.Events\InventoryManager.Domain.Events.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.0" />
-    <PackageReference Include="MassTransit" Version="8.0.7" />
-    <PackageReference Include="MediatR" Version="11.0.0" />
-  </ItemGroup>
-
 </Project>

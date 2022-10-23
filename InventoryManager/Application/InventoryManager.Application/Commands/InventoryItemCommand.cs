@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace InventoryManager.Domain.Commands
+namespace InventoryManager.Application.Commands
 {
     public class InventoryItemCommand
     {

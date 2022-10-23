@@ -9,22 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManager.Domain.Commands
+namespace InventoryManager.Application.Commands
 {
     /// <summary>
-    /// DeleteByIdInventoryCommand class.
+    /// UpdateInventoryCommand class.
     /// </summary>
-    public class DeleteByIdInventoryCommand : IRequest<int>
+    public class UpdateInventoryCommand : InventoryItemCommand, IRequest<int>
     {
         /// <summary>
-        /// The identifier
+        /// The Resquest inventory item Id
         /// </summary>
-        public int Id { get; set; }
+        public int RequestInventoryItemId { get; set; }
 
         /// <summary>
-        /// DeleteByNameInventoryCommandHandler class.
+        ///UpdateInventoryCommandHandlers class.
         /// </summary>
-        public class DeleteByIdInventoryCommandHandler : IRequestHandler<DeleteByIdInventoryCommand, int>
+        public class UpdateInventoryCommandHandler : IRequestHandler<UpdateInventoryCommand, int>
         {
             IRepository<InventoryItem> repository;
             IMapper mapper;
@@ -33,7 +33,7 @@ namespace InventoryManager.Domain.Commands
             /// GetInventoryItemsHandler method.
             /// </summary>
             /// <param name="repository"></param>
-            public DeleteByIdInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
+            public UpdateInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
             {
                 this.repository = repository;
                 this.mapper = mapper;
@@ -45,9 +45,9 @@ namespace InventoryManager.Domain.Commands
             /// <param name="request"></param>
             /// <param name="cancellationToken"></param>
             /// <returns></returns>
-            public async Task<int> Handle(DeleteByIdInventoryCommand request, CancellationToken cancellationToken)
+            public async Task<int> Handle(UpdateInventoryCommand request, CancellationToken cancellationToken)
             {
-                await repository.DeleteAsync(request.Id);
+                await repository.UpdateAsync(request.RequestInventoryItemId, mapper.Map<InventoryItem>(request));
 
                 return request.Id;  
             }

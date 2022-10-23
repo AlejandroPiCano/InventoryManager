@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authentication;
 using MediatR;
 using MassTransit;
 using InventoryManager.Domain.Events;
+using InventoryManager.Application.Events;
 
 namespace InventoryManager
 {

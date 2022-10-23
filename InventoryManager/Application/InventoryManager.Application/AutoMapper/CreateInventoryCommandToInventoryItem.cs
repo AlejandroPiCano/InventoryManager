@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using InventoryManager.Application.Commands;
 using InventoryManager.Domain.Entities;
-using InventoryManager.Domain.Commands;
 
-namespace InventoryManager.Domain.AutoMapper
+namespace InventoryManager.Application.AutoMapper
 {
     /// <summary>
     /// The CreateInventoryCommandToInventoryItem class

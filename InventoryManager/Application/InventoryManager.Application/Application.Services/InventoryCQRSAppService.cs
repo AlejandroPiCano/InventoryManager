@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using FluentValidation.Results;
+using InventoryManager.Application.Commands;
 using InventoryManager.Application.DTOs;
-using InventoryManager.Domain.Commands;
+using InventoryManager.Application.Events;
+using InventoryManager.Application.Queries;
 using InventoryManager.Domain.Entities;
-using InventoryManager.Domain.Events;
-using InventoryManager.Domain.Queries;
 using InventoryManager.Domain.Repository.Contracts;
 using InventoryManager.Domain.Services;
-using MassTransit;
 using MediatR;
 using System.Collections.Generic;
 using ValidationResult = FluentValidation.Results.ValidationResult;

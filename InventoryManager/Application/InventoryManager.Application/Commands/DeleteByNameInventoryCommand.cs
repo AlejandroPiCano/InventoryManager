@@ -9,22 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManager.Domain.Commands
+namespace InventoryManager.Application.Commands
 {
     /// <summary>
-    /// UpdateInventoryCommand class.
+    /// DeleteInventoryCommand class.
     /// </summary>
-    public class UpdateInventoryCommand : InventoryItemCommand, IRequest<int>
+    public class DeleteByNameInventoryCommand : IRequest<string>
     {
         /// <summary>
-        /// The Resquest inventory item Id
+        /// The Name
         /// </summary>
-        public int RequestInventoryItemId { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        ///UpdateInventoryCommandHandlers class.
+        /// DeleteByNameInventoryCommandHandler class.
         /// </summary>
-        public class UpdateInventoryCommandHandler : IRequestHandler<UpdateInventoryCommand, int>
+        public class DeleteByNameInventoryCommandHandler : IRequestHandler<DeleteByNameInventoryCommand, string>
         {
             IRepository<InventoryItem> repository;
             IMapper mapper;
@@ -33,7 +33,7 @@ namespace InventoryManager.Domain.Commands
             /// GetInventoryItemsHandler method.
             /// </summary>
             /// <param name="repository"></param>
-            public UpdateInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
+            public DeleteByNameInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
             {
                 this.repository = repository;
                 this.mapper = mapper;
@@ -45,11 +45,11 @@ namespace InventoryManager.Domain.Commands
             /// <param name="request"></param>
             /// <param name="cancellationToken"></param>
             /// <returns></returns>
-            public async Task<int> Handle(UpdateInventoryCommand request, CancellationToken cancellationToken)
+            public async Task<string> Handle(DeleteByNameInventoryCommand request, CancellationToken cancellationToken)
             {
-                await repository.UpdateAsync(request.RequestInventoryItemId, mapper.Map<InventoryItem>(request));
+                await repository.DeleteByNameAsync(request.Name);
 
-                return request.Id;  
+                return request.Name;  
             }
         }
     }

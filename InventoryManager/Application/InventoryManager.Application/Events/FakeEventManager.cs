@@ -1,15 +1,16 @@
-﻿using System;
+﻿using MassTransit;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManager.Domain.Events
+namespace InventoryManager.Application.Events
 {
     /// <summary>
-    /// The ICustomEventManager interface
+    /// The CustomEventManager class
     /// </summary>
-    public interface ICustomEventManager
+    public class FakeEventManager : ICustomEventManager
     {
         /// <summary>
         /// The SendItemExpiredEvent method
@@ -17,13 +18,19 @@ namespace InventoryManager.Domain.Events
         /// <param name="name"></param>
         /// <param name="expirationDate"></param>
         /// <returns>The Task of this action.</returns>
-        Task SendItemExpiredEvent(string name, DateTime? expirationDate);
+        public async Task SendItemExpiredEvent(string name, DateTime? expirationDate)
+        {
+           await Task.Run(() => { });
+        }
 
         /// <summary>
-        /// The SendItemRemovedEvent
+        /// The SendItemRemovedEvent method
         /// </summary>
         /// <param name="name"></param>
         /// <returns>The Task of this action.</returns>
-        Task SendItemRemovedEvent(string name);
+        public async Task SendItemRemovedEvent(string name)
+        {
+            await Task.Run(() => { });
+        }
     }
 }

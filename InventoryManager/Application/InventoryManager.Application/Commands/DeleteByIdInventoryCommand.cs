@@ -9,17 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManager.Domain.Commands
+namespace InventoryManager.Application.Commands
 {
     /// <summary>
-    /// CreateInventoryCommand class.
+    /// DeleteByIdInventoryCommand class.
     /// </summary>
-    public class CreateInventoryCommand : InventoryItemCommand, IRequest<int>
+    public class DeleteByIdInventoryCommand : IRequest<int>
     {
         /// <summary>
-        /// CreateInventoryCommandHandlers class.
+        /// The identifier
         /// </summary>
-        public class CreateInventoryCommandHandler : IRequestHandler<CreateInventoryCommand, int>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// DeleteByNameInventoryCommandHandler class.
+        /// </summary>
+        public class DeleteByIdInventoryCommandHandler : IRequestHandler<DeleteByIdInventoryCommand, int>
         {
             IRepository<InventoryItem> repository;
             IMapper mapper;
@@ -28,7 +33,7 @@ namespace InventoryManager.Domain.Commands
             /// GetInventoryItemsHandler method.
             /// </summary>
             /// <param name="repository"></param>
-            public CreateInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
+            public DeleteByIdInventoryCommandHandler(IRepository<InventoryItem> repository, IMapper mapper)
             {
                 this.repository = repository;
                 this.mapper = mapper;
@@ -40,9 +45,9 @@ namespace InventoryManager.Domain.Commands
             /// <param name="request"></param>
             /// <param name="cancellationToken"></param>
             /// <returns></returns>
-            public async Task<int> Handle(CreateInventoryCommand request, CancellationToken cancellationToken)
+            public async Task<int> Handle(DeleteByIdInventoryCommand request, CancellationToken cancellationToken)
             {
-                await repository.CreateAsync(mapper.Map<InventoryItem>(request));
+                await repository.DeleteAsync(request.Id);
 
                 return request.Id;  
             }

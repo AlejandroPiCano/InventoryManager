@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManager.Domain.Queries
+namespace InventoryManager.Application.Queries
 {
     /// <summary>
     /// GetInventoryItemsQuery class.
