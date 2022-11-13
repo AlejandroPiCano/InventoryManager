@@ -42,6 +42,11 @@ namespace InventoryManager.API.Security
         {
             var authHeader = Request.Headers["Authorization"].ToString();
 
+            //Ignoring authentication for HealtChecks.
+            if (Request.Path.ToString().StartsWith("/ui") || Request.Path.ToString().EndsWith("/health") || Request.Path.ToString().EndsWith("/health-ui"))
+            {
+                return Task.FromResult(AuthenticateResult.Success(new AuthenticationTicket(new ClaimsPrincipal(), Scheme.Name)));
+            }
             if (authHeader != null && authHeader.StartsWith("basic", StringComparison.OrdinalIgnoreCase))
             {
                 var token = authHeader.Substring("Basic ".Length).Trim();

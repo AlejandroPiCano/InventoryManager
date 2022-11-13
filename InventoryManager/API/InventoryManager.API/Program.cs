@@ -10,8 +10,12 @@ using InventoryManager.Infrastructure;
 using Microsoft.AspNetCore.Authentication;
 using MediatR;
 using MassTransit;
-using InventoryManager.Domain.Events;
 using InventoryManager.Application.Events;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using HealthChecks.UI.Client;
+using RabbitMQ.Client;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using System.Xml.Linq;
 
 namespace InventoryManager
 {
@@ -67,10 +71,10 @@ namespace InventoryManager
 
             //// Comment this region for desactivate RabbitMq
             #region MassTransit
-          
+
             builder.Services.AddMassTransit(x =>
             {
-               
+
                 x.UsingRabbitMq((context, cfg) =>
                 {
                     if (IsRunningInContainer)
@@ -100,6 +104,12 @@ namespace InventoryManager
              ("BasicAuthentication", null);
             builder.Services.AddAuthorization();
 
+            //HealthCheck
+            builder.Configuration.AddConfiguration(HealthCheckHelper.BuildBasicHealthCheck());
+            builder.Services.AddHealthChecks();
+            builder.Services.AddHealthChecksUI().AddInMemoryStorage();
+            builder.Services.AddHealthChecks().AddRabbitMQ(IsRunningInContainer ? HealthCheckHelper.GetRabbitMqDockerConnection : HealthCheckHelper.GetRabbitMqLocalhostConnection, name: "MyRabbitMQ", failureStatus: HealthStatus.Unhealthy);
+
             var app = builder.Build();
             app.UseCors("EnableCORS");
 
@@ -118,6 +128,16 @@ namespace InventoryManager
 
             app.MapControllers();
 
+            //HealthCheck
+            app.MapHealthChecks("/health", new HealthCheckOptions()
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
+
+            app.MapHealthChecksUI(config => config.UIPath = "/health-ui");
+            
+            //App run
             app.Run();
         }
     }
